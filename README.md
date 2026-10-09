@@ -37,3 +37,10 @@ Windows x64；本地语音建议准备足够内存，16 GB 是参考配置，不
 
 ## 发布形态
 此目录是可运行便携成品，**不是源码工程，也不是 Plus 安装器**。文档可放 GitHub 仓库展示；大体积运行包需另作为发行附件组织。当前没有因新增 README 而创建或上传 Plus 远程仓库。
+
+## GitHub下载
+
+[完整便携包Release](https://github.com/Mizusamada/TerraDeskMatePlus/releases)
+
+仓库main提供公开教程。完整运行包使用Release分卷；附件上传及远程完整性检查全部完成后才公开，未看到公开Release时表示尚未交付完整下载。
+
