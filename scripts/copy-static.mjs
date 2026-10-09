@@ -11,8 +11,10 @@ await cp('apps/desktop/src/renderer/pcm-worklet.js', 'dist/apps/desktop/renderer
 
 await cp('apps/desktop/src/renderer/icon.png', 'dist/apps/desktop/renderer/icon.png');
 
-await cp('assets/builtin','dist/assets/builtin',{recursive:true});
+// Keep Plus reference-only when rebuilding; local optional trained artifacts must not enter the bundle.
+await cp('assets/builtin','dist/assets/builtin',{recursive:true,filter:p=>!p.split(/[\\/]/).includes('trained-voices')});
 
 // Training uses audited fixed scripts shipped with the application, never renderer-provided shell code.
 await mkdir('dist/training',{recursive:true});
 for(const name of ['train-role.py','train-role-batch.py','train-gpt-single-gpu.py','train-sovits-single-gpu.py'])await cp('scripts/'+name,'dist/training/'+name);
+
