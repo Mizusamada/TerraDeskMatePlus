@@ -1,0 +1,13 @@
+import {mkdirSync,copyFileSync,readFileSync,writeFileSync,existsSync,statSync} from 'node:fs';import path from 'node:path';import {randomUUID}from'node:crypto';
+export class UserVoiceLibrary {
+ constructor(private dir:string){}
+ overrides(characterId:string){const file=path.join(this.dir,'voices','overrides.json');return existsSync(file)?JSON.parse(readFileSync(file,'utf8'))[characterId]||{}:{};}
+ setOverride(id:string,characterId:string,patch:any){const folder=path.join(this.dir,'voices');mkdirSync(folder,{recursive:true});const file=path.join(folder,'overrides.json');const all=existsSync(file)?JSON.parse(readFileSync(file,'utf8')):{};all[characterId]||={};all[characterId][id]={title:String(patch.title||'').slice(0,200),textJa:String(patch.textJa||'').slice(0,2000),textZh:String(patch.textZh||'').slice(0,2000)};writeFileSync(file,JSON.stringify(all));return all[characterId][id];}
+ list(characterId:string){const f=path.join(this.dir,'voices','manifest.json');if(!existsSync(f))return [];return (JSON.parse(readFileSync(f,'utf8')) as any[]).filter(v=>v.characterId===characterId);}
+ addFile(file:string,characterId:string,title=path.basename(file),textJa='',textZh='',source='imported'){
+  if(!existsSync(file)||statSync(file).size>50*1024*1024||!['.wav','.mp3','.ogg','.flac','.webm','.m4a'].includes(path.extname(file).toLowerCase()))throw new Error('请选择50MB以内的音频文件');
+  const folder=path.join(this.dir,'voices');mkdirSync(folder,{recursive:true});const id='user-'+randomUUID(),saved=path.join(folder,id+path.extname(file));copyFileSync(file,saved);const f=path.join(folder,'manifest.json');const items=existsSync(f)?JSON.parse(readFileSync(f,'utf8')):[];const voice={id,title,textJa,textZh,source,characterId,audioPath:saved};items.push(voice);writeFileSync(f,JSON.stringify(items),'utf8');return voice;
+ }
+ record(bytes:Uint8Array,characterId:string){if(!(bytes instanceof Uint8Array)||bytes.length<100||bytes.length>20*1024*1024)throw new Error('录音数据应在20MB内');const folder=path.join(this.dir,'recordings');mkdirSync(folder,{recursive:true});const file=path.join(folder,randomUUID()+'.webm');writeFileSync(file,bytes);return {path:file,characterId};}
+ update(id:string,characterId:string,patch:{title?:string;textJa?:string;textZh?:string}){const file=path.join(this.dir,'voices','manifest.json');if(!existsSync(file))throw new Error('语音不存在');const items=JSON.parse(readFileSync(file,'utf8'));const item=items.find((v:any)=>v.id===id&&v.characterId===characterId);if(!item)throw new Error('语音不存在');for(const k of ['title','textJa','textZh']as const)if(patch[k]!==undefined)item[k]=String(patch[k]).slice(0,2000);writeFileSync(file,JSON.stringify(items));return item;}
+}

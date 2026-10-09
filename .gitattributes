@@ -1,0 +1,10 @@
+* text=auto
+*.png binary
+*.ico binary
+*.mp3 binary
+*.wav binary
+*.skel binary
+*.pth binary
+*.ckpt binary
+*.exe binary
+*.bin binary

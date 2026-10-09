@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "id": "shared-local-reference-v2",
+  "description": "所有角色共用一个v2参考推理环境；独立训练权重是否可用取决于各角色验证状态。",
+  "localSpeech": {
+    "installPath": "speech-runtime/GPT-SoVITS",
+    "pythonPath": "speech-runtime/GPT-SoVITS/env/python.exe",
+    "gptModelPath": "speech-runtime/GPT-SoVITS/GPT_SoVITS/pretrained_models/gsv-v2final-pretrained/s1bert25hz-5kh-longer-epoch=12-step=369668.ckpt",
+    "sovitsModelPath": "speech-runtime/GPT-SoVITS/GPT_SoVITS/pretrained_models/gsv-v2final-pretrained/s2G2333k.pth",
+    "referenceAudioPath": "dist/assets/builtin/干员语音/Amiya/cn_003.mp3",
+    "device": "auto",
+    "language": "ja",
+    "promptText": ""
+  }
+}

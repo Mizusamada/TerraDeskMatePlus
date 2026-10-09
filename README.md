@@ -36,11 +36,16 @@ Windows x64；本地语音建议准备足够内存，16 GB 是参考配置，不
 参考推理不是角色训练，也不是保留原语调的音频到音频变声。全量版附带的训练产物同样不等于全部音色已通过人工验收。
 
 ## 发布形态
-此目录是可运行便携成品，**不是源码工程，也不是 Plus 安装器**。文档可放 GitHub 仓库展示；大体积运行包需另作为发行附件组织。当前没有因新增 README 而创建或上传 Plus 远程仓库。
+本GitHub仓库提供应用源码与构建资料；普通用户请从Release下载离线安装器或完整便携分卷，不需要npm。安装器所有同名BIN须与EXE放同一目录；便携分卷全部下载后用7-Zip打开第一卷。两种方式均不带41套角色训练权重。源码ZIP不是开箱即用程序，资源需用准备资源.ps1恢复。
 
 ## GitHub下载
 
 [完整便携包Release](https://github.com/Mizusamada/TerraDeskMatePlus/releases)
 
 仓库main提供公开教程。完整运行包使用Release分卷；附件上传及远程完整性检查全部完成后才公开，未看到公开Release时表示尚未交付完整下载。
+
+
+## 开发者源码运行
+
+Windows x64准备Node.js/npm；使用准备资源.ps1恢复全角色基础资源，按需加-IncludeSpeechRuntime恢复共用环境（不恢复专属训练权重）。执行npm ci、npm run build、npm start。普通用户不需要上述步骤。
 

@@ -1,0 +1,32 @@
+{
+  "name": "terra-desk-mate",
+  "version": "0.3.0",
+  "private": true,
+  "description": "泰拉桌伴 Terra DeskMate · AI Windows 桌宠",
+  "main": "dist/apps/desktop/main/main.js",
+  "type": "module",
+  "scripts": {
+    "clean": "node scripts/clean.mjs",
+    "build": "npm run clean && npm run build:main && npm run build:preload && npm run build:renderer && npm run copy:static",
+    "build:main": "esbuild apps/desktop/src/main/main.ts --bundle --platform=node --external:electron --external:ws --format=esm --outfile=dist/apps/desktop/main/main.js",
+    "build:preload": "esbuild apps/desktop/src/preload/bridge.ts --bundle --platform=node --external:electron --format=cjs --outfile=dist/apps/desktop/preload/bridge.cjs",
+    "build:renderer": "esbuild apps/desktop/src/renderer/renderer.ts --bundle --platform=browser --format=iife --outfile=dist/apps/desktop/renderer/renderer.js",
+    "copy:static": "node scripts/copy-static.mjs",
+    "typecheck": "tsc --noEmit",
+    "dev": "npm run build && npm start",
+    "start": "node scripts/launch.mjs",
+    "package:portable": "npm run build && node scripts/package-delivery.mjs",
+    "package:delivery": "npm run build && node scripts/package-delivery.mjs",
+    "package:installer": "node scripts/build-windows-installers.mjs"
+  },
+  "devDependencies": {
+    "@types/node": "^24.7.2",
+    "electron": "44.5.1",
+    "esbuild": "^0.25.9",
+    "tsx": "^4.19.2",
+    "typescript": "^5.9.2"
+  },
+  "dependencies": {
+    "ws": "^8.18.0"
+  }
+}

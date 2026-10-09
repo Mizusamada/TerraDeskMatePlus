@@ -1,0 +1,24 @@
+node_modules/
+dist/
+release/
+.test-data/
+.env
+.env.*
+*.log
+__pycache__/
+*.pyc
+*.db
+*.sqlite*
+secrets*.json
+user-data/
+
+.installer-build/
+
+# Large byte-identical assets are distributed via free Release assets, not Git LFS.
+assets/builtin/
+角色基础包/
+语音权重包/
+speech-runtime/
+安装程序/
+
+.downloads/
