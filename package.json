@@ -1,6 +1,6 @@
 {
   "name": "terra-desk-mate",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "private": true,
   "description": "泰拉桌伴 Terra DeskMate · AI Windows 桌宠",
   "main": "dist/apps/desktop/main/main.js",
@@ -13,16 +13,22 @@
     "build:renderer": "esbuild apps/desktop/src/renderer/renderer.ts --bundle --platform=browser --format=iife --outfile=dist/apps/desktop/renderer/renderer.js",
     "copy:static": "node scripts/copy-static.mjs",
     "typecheck": "tsc --noEmit",
+    "test": "tsx --test services/core/tests/stabilityRegression.test.ts services/core/tests/desktopRuntimePolicy.test.ts services/core/tests/deploymentPolicy.test.ts services/core/tests/standbyAnimation.test.ts && node --test scripts/tests/release-resource-policy.test.mjs",
+    "verify": "npm run typecheck && npm test && npm run build",
     "dev": "npm run build && npm start",
     "start": "node scripts/launch.mjs",
+    "test:electron": "node scripts/regression-electron.mjs",
     "package:portable": "npm run build && node scripts/package-delivery.mjs",
     "package:delivery": "npm run build && node scripts/package-delivery.mjs",
-    "package:installer": "node scripts/build-windows-installers.mjs"
+    "test:stability": "node --import tsx scripts/diagnose-stability.mjs",
+    "test:startup": "node scripts/regression-startup.mjs",
+    "test:resources": "tsx --test services/core/tests/*.test.ts"
   },
   "devDependencies": {
     "@types/node": "^24.7.2",
     "electron": "44.5.1",
     "esbuild": "^0.25.9",
+    "playwright": "^1.63.0",
     "tsx": "^4.19.2",
     "typescript": "^5.9.2"
   },

@@ -1,0 +1,4 @@
+// Ensure the quiet detector cannot use PowerShell's readonly PID or hide a shell/owner window.
+import {test} from 'node:test';import assert from 'node:assert/strict';import {FullscreenWatcher,fullscreenProbeScript} from '../src/fullscreenWatcher.js';
+test('fullscreen probe targets foreground external windows rather than transparent pets or desktop',()=>{assert.ok(fullscreenProbeScript.includes('GetForegroundWindow'));assert.ok(fullscreenProbeScript.includes('windowProcessId==ownerProcessId'));for(const cls of ['Progman','WorkerW','Shell_TrayWnd'])assert.ok(fullscreenProbeScript.includes(cls));assert.ok(!/\$pid\b/i.test(fullscreenProbeScript));});
+test('stopping the quiet detector restores hidden visibility once',()=>{const changes:boolean[]=[];const w=new FullscreenWatcher(v=>changes.push(v));w.fullscreen=true;w.stop();w.stop();assert.deepEqual(changes,[false]);});

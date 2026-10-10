@@ -22,3 +22,8 @@ speech-runtime/
 安装程序/
 
 .downloads/
+
+# Local update journals/backups never belong to public source.
+更新备份/
+更新补丁/
+.build/

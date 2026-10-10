@@ -3,7 +3,7 @@ import spine from './vendor/spine-webgl.js';
 import {measureBody,seatContact,deploymentHull,pointInPolygon} from '../../../../services/core/src/bodyGeometry.js';
 import {measurePreviewBody,previewFrame,previewStandbyName} from '../../../../services/core/src/previewGeometry.js';
 import {visibleSkeletonBounds} from '../../../../services/core/src/visibleBounds.js';
-import {targetScale,extendFrameEnvelope} from '../../../../services/core/src/displayGeometry.js';
+import {targetScale,extendFrameEnvelope,cameraEnvelope} from '../../../../services/core/src/displayGeometry.js';
 import {standbyAnimationName} from '../../../../services/core/src/desktopPolicy.js';
 import {atlasDeclaredSizes,nativeAtlasTexture,compatibleAtlasNames} from '../../../../services/core/src/atlasScale.js';
 
@@ -29,6 +29,8 @@ export interface SpinePetOptions {
   anchor?: {x:number;y:number};
   // Opt-in for passive control previews only; native pets/enemies retain their complete-action camera.
   previewOnly?: boolean;
+  // Keep the last valid framebuffer visible while a replacement bundle loads; prevents flicker/disappearance on action switches.
+  preserveFrame?: boolean;
   maxFps?: number;
   onAnimationsReady?: (names: string[]) => void;
   onError?: (error: Error) => void;
@@ -43,9 +45,9 @@ function toDataUrl(blob: Blob): Promise<string> {
   });
 }
 
-async function fetchDataUrl(url: string): Promise<string> {
+async function fetchDataUrl(url: string,signal?:AbortSignal): Promise<string> {
   try {
-    const response = await fetch(url);
+    const response = await fetch(url,{signal});
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     return toDataUrl(await response.blob());
   } catch (error) {
@@ -68,7 +70,10 @@ export class SpinePet {
   private onError?: (error: Error) => void;
   private frameId: number | null = null;
   private lastFrameTime = 0;
+  private loadAbort=new AbortController();
+  private previewReferenceTime=0;
   private destroyed = false;
+  private paused = false;
   private pixelRatio = Math.max(1, Math.min(window.devicePixelRatio || 1, 2));
   private currentAnimation = '';
   private animationBounds=new Map<string,any>();
@@ -122,10 +127,10 @@ export class SpinePet {
     this.gl.clear(this.gl.COLOR_BUFFER_BIT);
   }
 
-  async load(): Promise<void> {
+  async load(): Promise<boolean> {
     try {
       const names = [this.source.skeleton, this.source.atlas, ...(this.source.textures||[this.source.texture])];
-      const dataUrls = await Promise.all(names.map((name) => fetchDataUrl(this.source.baseUrl + encodeURIComponent(name))));
+      const dataUrls = await Promise.all(names.map((name) => fetchDataUrl(this.source.baseUrl + encodeURIComponent(name),this.loadAbort.signal)));
       // PRTS preview PNGs may be downscaled while atlas coordinates are original-sized.
       // Normalize in memory, never modify the original user asset.
       const atlasText=await (await fetch(dataUrls[1])).text();
@@ -152,12 +157,14 @@ export class SpinePet {
       names.forEach((name, index) => this.assetManager.setRawDataURI(name, dataUrls[index]));      if(this.source.json)this.assetManager.loadText(this.source.skeleton);else this.assetManager.loadBinary(this.source.skeleton);
       this.assetManager.loadTextureAtlas(this.source.atlas);
       await this.waitForAssets();
-      if(this.destroyed)return;
-      this.createSkeleton();
+      if(this.destroyed)return false;
+      await this.createSkeleton();
       this.renderFrame();
+      return true;
     } catch (error) {
       const normalized = error instanceof Error ? error : new Error(String(error));
       this.onError?.(normalized);
+      return false;
     }
   }
 
@@ -180,7 +187,7 @@ export class SpinePet {
     });
   }
 
-  private createSkeleton(): void {
+  private async createSkeleton(): Promise<void> {
     const loadedAtlas = this.assetManager.get(this.source.atlas);
     if (!loadedAtlas) throw new Error('Spine atlas 未加载。');
     const sizes=atlasDeclaredSizes(this.authoredAtlasText);
@@ -212,9 +219,30 @@ export class SpinePet {
     // A passive preview never plays attacks/Sit. Their huge envelopes previously shrank the idle body to 30-90 CSS pixels.
     // Keep the native path untouched; the preview samples only its real standby animation and keeps extra parts in an expanded canvas.
     const previewIdle=previewStandbyName(names);
-    const cameraAnimations=this.previewOnly?data.animations.filter(a=>a.name===previewIdle):data.animations;
-    for(const animation of cameraAnimations){let maxBody=0;const steps=Math.min(1200,Math.max(24,Math.ceil(animation.duration*60)));for(let i=0;i<=steps;i++){probe.setToSetupPose();probeState.clearTracks();probeState.setAnimation(0,animation.name,false);probeState.update(animation.duration*(i/Math.max(1,steps)));probeState.apply(probe);probe.updateWorldTransform();const measured=this.bodyMeasure(probe);const o=new spine.Vector2(),z=new spine.Vector2();visibleSkeletonBounds(probe,o,z);if(Number.isFinite(measured.height)&&measured.height>0){maxBody=Math.max(maxBody,measured.height);const cx=(measured.left+measured.right)/2,contact=/^sit/i.test(animation.name)?seatContact(probe):measured.bottom;// Ignore non-renderable author markers: Infinity/NaN here previously erased all subsequent Viviana frames.
-    extendFrameEnvelope(this.displayEnvelope,measured,{x:o.x,y:o.y,width:z.x,height:z.y},contact);}}if(maxBody>0)this.animationBodyHeights[animation.name]=maxBody;}
+    const catalogEnvelope=!this.previewOnly?cameraEnvelope(this.source.camera,this.source.scale??1):null;
+    if(catalogEnvelope){this.displayEnvelope=catalogEnvelope;}
+    else{
+      // Custom/incomplete catalogs still need real geometry. Yield at bounded intervals so
+      // loading another model never blocks the currently visible pet's frame/input loop.
+      const cameraAnimations=this.previewOnly?data.animations.filter(a=>a.name===previewIdle):data.animations;
+      let probes=0;
+      for(const animation of cameraAnimations){
+        let maxBody=0;const steps=Math.min(1200,Math.max(24,Math.ceil(animation.duration*60)));
+        for(let i=0;i<=steps;i++){
+          if(this.destroyed)return;
+          probe.setToSetupPose();probeState.clearTracks();probeState.setAnimation(0,animation.name,false);
+          const time=animation.duration*(i/Math.max(1,steps));probeState.update(time);probeState.apply(probe);probe.updateWorldTransform();
+          const measured=this.bodyMeasure(probe),o=new spine.Vector2(),z=new spine.Vector2();visibleSkeletonBounds(probe,o,z);
+          if(Number.isFinite(measured.height)&&measured.height>0&&[measured.left,measured.right,measured.bottom].every(Number.isFinite)){
+            if(measured.height>maxBody){maxBody=measured.height;if(this.previewOnly)this.previewReferenceTime=time;}
+            extendFrameEnvelope(this.displayEnvelope,measured,{x:o.x,y:o.y,width:z.x,height:z.y},/^sit/i.test(animation.name)?seatContact(probe):measured.bottom);
+          }
+          if(++probes%64===0)await new Promise(resolve=>setTimeout(resolve,0));
+        }
+        if(maxBody>0)this.animationBodyHeights[animation.name]=maxBody;
+      }
+    }
+    if(this.destroyed)return;
     this.animationState.addListener({complete:(entry)=>{if(!entry.loop&&entry.returnToIdle!==false){const idle=data.animations.find(a=>a.name===standbyAnimationName(names));if(idle&&entry.animation.name!==idle.name&&!entry.next)this.animationState.addAnimation(0,idle.name,true,0);}}});
     const preferred = this.previewOnly?previewIdle:(standbyAnimationName(names) ?? names.find((name:string)=>!/^default$|die|death|start/i.test(name)));
     if (preferred) this.playAnimation(preferred, true);
@@ -227,7 +255,7 @@ export class SpinePet {
     // normalize its height, then anchor its body (not its transparent source canvas).
     this.skeleton.setToSetupPose();
     const idle=this.previewOnly?previewStandbyName(this.getAnimationNames()):standbyAnimationName(this.getAnimationNames());
-    if(idle){this.animationState.clearTracks();this.animationState.setAnimation(0,idle,true);this.animationState.apply(this.skeleton);}
+    if(idle){this.animationState.clearTracks();const entry=this.animationState.setAnimation(0,idle,true);if(this.previewOnly)entry.trackTime=this.previewReferenceTime;this.animationState.apply(this.skeleton);}
     this.skeleton.scaleX=1;this.skeleton.scaleY=1;this.skeleton.x=0;this.skeleton.y=0;this.skeleton.updateWorldTransform();
     const body=this.bodyMeasure(this.skeleton);
     if(!Number.isFinite(body.height)||body.height<=0)throw new Error('模型没有可见本体，无法建立显示几何');
@@ -259,6 +287,7 @@ export class SpinePet {
       this.canvas.dataset.renderScale=String(this.fixedCamera.scale);
     }
     this.deploymentBody=this.bodyMeasure(this.skeleton);
+    if(this.previewOnly){const entry=this.animationState.getCurrent(0);if(entry)entry.trackTime=0;this.lastFrameTime=performance.now()/1000;}
   }
   private applyCamera():void {
     if(!this.fixedCamera)return;
@@ -270,6 +299,9 @@ export class SpinePet {
     const target={x:this.canvas.width/2,y:6*this.pixelRatio};
     const contact=sitting?seatContact(this.skeleton):body.bottom;
     const bodyCenter=(body.left+body.right)/2;
+    // Fully transparent authored transition frames have no anchor. Never write NaN/Infinity
+    // into the skeleton; the next real pose must render normally without reloading the model.
+    if(!Number.isFinite(bodyCenter)||!Number.isFinite(contact))return;
     const anchorX=this.anchor?.x!==undefined?this.anchor.x*this.pixelRatio:target.x;
     const anchorY=this.anchor?.y!==undefined?this.anchor.y*this.pixelRatio:target.y;
     this.skeleton.x=anchorX-bodyCenter;
@@ -284,6 +316,9 @@ export class SpinePet {
     this.canvas.dataset.bodyBounds=JSON.stringify({x:placed.left/this.pixelRatio,y:this.canvas.clientHeight-placed.top/this.pixelRatio,width:placed.width/this.pixelRatio,height:placed.height/this.pixelRatio});
     this.canvas.dataset.normalizedBodyHeight=String(this.targetBodyHeight||placed.height/this.pixelRatio);
   }
+
+  /** FPS-only settings must not reload/erase an active model or consume its Move deadline. */
+  setMaxFps(value:number):void {this.maxFps=Math.max(15,Math.min(60,Number(value)||30));}
 
   getAnimationNames(): string[] {
     return this.skeleton?.data?.animations?.map((animation: any) => animation.name) ?? [];
@@ -359,9 +394,11 @@ export class SpinePet {
     return pixel[3]>16;
   }
 
-  destroy(): void {
+  destroy(clearFrame=true): void {
+    if(this.destroyed)return;
+    this.loadAbort.abort();
     // Clear the old bundle before disposing it. During a build->battle switch, leaving the previous framebuffer visible briefly composites two models and looks like blur/atlas seams.
-    this.clearFrame();
+    if(clearFrame)this.clearFrame();
     this.destroyed = true;
     if (this.frameId !== null) cancelAnimationFrame(this.frameId);
     this.animationState?.clearTracks();
@@ -371,6 +408,13 @@ export class SpinePet {
     this.animationState = null;
   }
 }
+
+
+
+
+
+
+
 
 
 

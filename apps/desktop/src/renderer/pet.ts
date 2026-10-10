@@ -7,9 +7,9 @@ const api=window.petApi;
 export async function initPet(){
   const root=document.querySelector('#app');
   root.innerHTML=`<div class="pet-root"><div class="pet-bubble" role="status" aria-live="polite"><div class="zh"></div><div class="ja" lang="ja"></div><span class="bubble-resize-hint" aria-hidden="true">↘</span></div><canvas id="spine-canvas" aria-label="桌宠，单击随机动作，双击选择动作，拖拽移动"></canvas><div class="pet-controls" aria-label="桌宠悬停菜单"><button class="pet-control" data-pet="chat">◌ 开始对话</button><button class="pet-control" data-pet="actions">✧ 播放动作</button><button class="pet-control" data-pet="voices">♫ 播放语音</button><button class="pet-control" data-pet="mic">♬ 语音输入</button><button class="pet-control danger" data-pet="close">× 取消这只桌宠</button></div></div>`;
-  const canvas=document.querySelector('#spine-canvas'),bubble=document.querySelector('.pet-bubble'),menu=document.querySelector('.pet-controls');
+  let canvas=document.querySelector('#spine-canvas');const bubble=document.querySelector('.pet-bubble'),menu=document.querySelector('.pet-controls');
   const local=setupLocalPanels(api,root,()=>config);let recoveries=0,watchdog=null;
-  let config=null,pet=null,source=null,audio=null,subtitleReply=null,bubbleTimer=null,clickTimer=null,loadToken=0,hoverTimer=null,leaveTimer=null,pointer=null,dragging=false,direction=1,surface='bottom',rotation=0,hovering=false,pendingAction=null,bubbleResizePending=false,contactTimer=null;
+  let loading=false,candidateInFlight=null;let config=null,pet=null,source=null,audio=null,subtitleReply=null,bubbleTimer=null,clickTimer=null,loadToken=0,hoverTimer=null,leaveTimer=null,pointer=null,dragging=false,direction=1,surface='bottom',rotation=0,hovering=false,pendingAction=null,bubbleResizePending=false,contactTimer=null;
 
   function canvasSizeFor(bundle,scale){
     const profile=bundle?.source?.camera,bodyHeight=Math.max(1,profile?.bodyHeight||profile?.idleHeight||450),b=profile?.fitBounds||profile?.bounds;
@@ -63,18 +63,35 @@ export async function initPet(){
     if(!keep)bubbleTimer=setTimeout(()=>bubble.classList.remove('visible'),Math.min(30000,Math.max(4500,(r.textJa?.length||r.textZh?.length||0)*110)));
   }
   function stopAudio(){if(audio){const a=audio;audio=null;a.onended=null;a.onerror=null;a.pause();a.removeAttribute('src');a.load();}}
-  function play(action){if(!pet||!pet.getAnimationNames().length){pendingAction=action;return;}if(!pet.playAnimation(action.name,action.loop,action.speed)){pendingAction=null;return;}pendingAction=null;document.body.dataset.animation=action.name;window.__petAnimationHistory=window.__petAnimationHistory||[];window.__petAnimationHistory.push({name:action.name,loop:!!action.loop,at:Date.now()});if(window.__petAnimationHistory.length>100)window.__petAnimationHistory.shift();}
+  function play(action){if(loading||!pet||!pet.getAnimationNames().length){pendingAction=action;return;}if(!pet.playAnimation(action.name,action.loop,action.speed)){pendingAction=null;return;}pendingAction=null;document.body.dataset.animation=action.name;window.__petAnimationHistory=window.__petAnimationHistory||[];window.__petAnimationHistory.push({name:action.name,loop:!!action.loop,at:Date.now()});if(window.__petAnimationHistory.length>100)window.__petAnimationHistory.shift();}
   async function loadPet(bundle,action){
-    if(action)pendingAction=action;const token=++loadToken;document.body.dataset.modelReady='loading';pet?.destroy();pet=null;
-    const b=bundle||await api.petSource();if(token!==loadToken)return;if(!b){subtitle({textJa:'',textZh:'缺少完整内置模型，请重新部署或导入自定义模型。'},true);return;}source=b;
-    const size=canvasSizeFor(b,config.ui.scale);
-    const instance=new SpinePet({canvas,source:b.source,size,targetBodyHeight:280*config.ui.scale,anchor:size.anchor,maxFps:config.ui.maxFps,onAnimationsReady:names=>{if(token!==loadToken)return;api.reportAnimations({bundleId:b.id,names});document.body.dataset.modelReady='true';document.body.dataset.bundleId=b.id;scheduleClamp();},onError:e=>{if(token!==loadToken)return;api.reportPetError(e.message);document.body.dataset.modelReady='error';subtitle({textJa:'',textZh:e.message},true);}});
-    pet=instance;await instance.load();if(token!==loadToken){instance.destroy();return;}if(pendingAction)play(pendingAction);
-    canvas.style.transformOrigin=(canvas.clientWidth/2)+'px '+(canvas.clientHeight/2)+'px';canvas.style.transform=`rotate(${rotation}deg) scaleX(${direction})`;canvas.style.filter=config.ui.shadow?'drop-shadow(0 8px 8px rgba(0,0,0,.28))':'none';scheduleClamp();
+    const token=++loadToken;candidateInFlight?.destroy();candidateInFlight=null;loading=true;pendingAction=action||null;
+    // Each candidate owns a separate canvas/context. An obsolete async completion must never
+    // clear, dispose, resume or write the active renderer's GPU resources.
+    const b=bundle||source||await api.petSource();
+    if(token!==loadToken)return;
+    if(!b){loading=false;api.reportPetError('缺少完整模型');return;}
+    const nextCanvas=document.createElement('canvas');nextCanvas.setAttribute('aria-label',canvas.getAttribute('aria-label')||'桌宠');
+    const size=canvasSizeFor(b,config.ui.scale);let error='';
+    const candidate=new SpinePet({canvas:nextCanvas,source:b.source,size,targetBodyHeight:280*config.ui.scale,anchor:size.anchor,maxFps:config.ui.maxFps,onError:e=>{error=e.message;}});
+    // Hidden candidate can finish its first frame before the DOM swap; the last valid model remains visible and animated throughout fetch/decode.
+    candidateInFlight=candidate;
+    const ok=await candidate.load();
+    if(token!==loadToken){candidate.destroy();return;}
+    if(!ok){candidate.destroy();candidateInFlight=null;loading=false;pendingAction=null;api.reportPetError(error||'模型加载失败');api.reportSourceFailure({bundleId:b.id,previousBundleId:source?.id});return;}
+    const previous=pet;const oldCanvas=canvas;
+    canvas=nextCanvas;canvas.id='spine-canvas';oldCanvas.replaceWith(canvas);pet=candidate;source=b;candidateInFlight=null;loading=false;
+    previous?.destroy(false);
+    document.body.dataset.modelReady='true';document.body.dataset.bundleId=b.id;
+    if(pendingAction)play(pendingAction);
+    canvas.style.transformOrigin=(canvas.clientWidth/2)+'px '+(canvas.clientHeight/2)+'px';canvas.style.transform='rotate('+rotation+'deg) scaleX('+direction+')';
+    canvas.style.filter=config.ui.shadow?'drop-shadow(0 8px 8px rgba(0,0,0,.28))':'none';
+    // Report ready only after the active canvas and requested action agree; native Move timers begin here.
+    api.reportAnimations({bundleId:b.id,names:pet.getAnimationNames()});scheduleClamp();
   }
   async function configure(c){
     const previous=config;config=c;document.documentElement.style.setProperty('--pet-scale',c.ui.scale);document.documentElement.dataset.theme=c.ui.theme;document.documentElement.dataset.motion=c.ui.reducedMotion?'reduced':'full';
-    if(!previous||previous.ui.scale!==c.ui.scale||previous.ui.maxFps!==c.ui.maxFps)await loadPet(source);
+    if(!previous||previous.ui.scale!==c.ui.scale)await loadPet(source);else pet?.setMaxFps(c.ui.maxFps);
     canvas.style.filter=c.ui.shadow?'drop-shadow(0 8px 8px rgba(0,0,0,.28))':'none';if(c.ui.muted||!c.speech.replyEnabled)stopAudio();if(subtitleReply)subtitle(subtitleReply,!!audio);else scheduleClamp();
   }
   api.on('config:changed',x=>void configure(x.config));
@@ -99,21 +116,26 @@ export async function initPet(){
   bubble.addEventListener('pointerdown',e=>{bubbleResizePending=true;e.stopPropagation();});
   document.addEventListener('pointerup',()=>saveBubbleSize());
   root.addEventListener('click',e=>{const b=e.target.closest('[data-pet]');if(!b)return;if(b.dataset.pet==='close'){void api.hoverPet(false);api.closePet();}else void local.open(b.dataset.pet);});
-  canvas.addEventListener('pointerdown',e=>{if(e.button!==0||!hit(e))return;pointer={x:e.screenX,y:e.screenY,localY:e.offsetY};dragging=false;canvas.setPointerCapture(e.pointerId);api.hoverPet(true);});
-  canvas.addEventListener('pointermove',e=>{if(pointer&&!dragging&&Math.hypot(e.screenX-pointer.x,e.screenY-pointer.y)>5){dragging=true;clearTimeout(clickTimer);menu.classList.remove('visible');api.dragPet('start');}});
-  canvas.addEventListener('pointerup',e=>{if(!pointer)return;if(dragging)api.dragPet('end');else{clearTimeout(clickTimer);const kind=pet?.interactionKind(pointer.localY)||'face_poke';clickTimer=setTimeout(()=>void api.playInteraction(kind).catch(x=>subtitle({textJa:'',textZh:x.message.replace(/^.*Error invoking remote method[^:]*:/,'')})),260);}pointer=null;dragging=false;if(canvas.hasPointerCapture(e.pointerId))canvas.releasePointerCapture(e.pointerId);});
+  root.addEventListener('pointerdown',e=>{if(e.target!==canvas||e.button!==0||!hit(e))return;pointer={x:e.screenX,y:e.screenY,localY:e.offsetY};dragging=false;canvas.setPointerCapture(e.pointerId);api.hoverPet(true);});
+  root.addEventListener('pointermove',e=>{if(pointer&&!dragging&&Math.hypot(e.screenX-pointer.x,e.screenY-pointer.y)>5){dragging=true;clearTimeout(clickTimer);menu.classList.remove('visible');api.dragPet('start');}});
+  root.addEventListener('pointerup',e=>{if(!pointer)return;if(dragging)api.dragPet('end');else{clearTimeout(clickTimer);const kind=pet?.interactionKind(pointer.localY)||'face_poke';clickTimer=setTimeout(()=>void api.playInteraction(kind).catch(x=>subtitle({textJa:'',textZh:x.message.replace(/^.*Error invoking remote method[^:]*:/,'')})),260);}pointer=null;dragging=false;if(canvas.hasPointerCapture(e.pointerId))canvas.releasePointerCapture(e.pointerId);});
   // Native-window movement can lose capture; end the gesture once so the instance never stays attached to the cursor.
-  canvas.addEventListener('lostpointercapture',()=>{if(dragging)api.dragPet('end');pointer=null;dragging=false;});
+  root.addEventListener('lostpointercapture',()=>{if(dragging)api.dragPet('end');pointer=null;dragging=false;});
   window.addEventListener('blur',()=>{if(dragging)api.dragPet('end');pointer=null;dragging=false;});
-  canvas.addEventListener('pointercancel',()=>{if(dragging)api.dragPet('end');pointer=null;dragging=false;});canvas.addEventListener('dblclick',e=>{if(hit(e)){clearTimeout(clickTimer);void local.open('actions');}});
+  root.addEventListener('pointercancel',()=>{if(dragging)api.dragPet('end');pointer=null;dragging=false;});root.addEventListener('dblclick',e=>{if(hit(e)){clearTimeout(clickTimer);void local.open('actions');}});
   root.addEventListener('contextmenu',e=>{e.preventDefault();api.petMenu();});
   document.addEventListener('keydown',e=>{if(!config.ui.manualMode)return;if(e.key==='ArrowLeft'||e.key==='ArrowRight'){e.preventDefault();api.manualPet(e.key==='ArrowLeft'?-12:12);}});
   const resizeObserver=new ResizeObserver(()=>{if(!bubbleResizePending)scheduleClamp();});resizeObserver.observe(bubble);
-  canvas.addEventListener('webglcontextlost',e=>{e.preventDefault();api.reportPetError('WebGL上下文丢失，等待恢复');});canvas.addEventListener('webglcontextrestored',()=>{if(source&&recoveries++<2)void loadPet(source);});
-  watchdog=setInterval(()=>{if(dragging||!pet||document.hidden)return;const last=Number(canvas.dataset.lastDraw||0);if(document.body.dataset.modelReady==='true'&&last&&Date.now()-last>4000&&recoveries++<2){api.reportPetError('检测到渲染帧中断，重新加载当前模型');void loadPet(source);}},1500);
+  root.addEventListener('webglcontextlost',e=>{e.preventDefault();api.reportPetError('WebGL上下文丢失，等待恢复');},true);root.addEventListener('webglcontextrestored',()=>{if(source&&recoveries++<2)void loadPet(source);},true);
+  watchdog=setInterval(()=>{if(dragging||loading||!pet||document.hidden)return;const last=Number(canvas.dataset.lastDraw||0);if(document.body.dataset.modelReady==='true'&&last&&Date.now()-last>4000&&recoveries++<2){api.reportPetError('检测到渲染帧中断，重新加载当前模型');void loadPet(source);}},1500);
   try{const x=await api.loadConfig();await configure(x.config);document.body.dataset.surface='bottom';}catch(e){api.reportPetError(e.message);bubble.querySelector('.zh').textContent=e.message;bubble.classList.add('visible');scheduleClamp();}
   window.addEventListener('resize',scheduleClamp);
-  window.addEventListener('beforeunload',()=>{++loadToken;clearInterval(watchdog);clearTimeout(hoverTimer);clearTimeout(leaveTimer);clearTimeout(bubbleTimer);clearTimeout(clickTimer);if(contactTimer)clearInterval(contactTimer);stopAudio();resizeObserver.disconnect();pet?.destroy();});
+  window.addEventListener('beforeunload',()=>{++loadToken;clearInterval(watchdog);clearTimeout(hoverTimer);clearTimeout(leaveTimer);clearTimeout(bubbleTimer);clearTimeout(clickTimer);if(contactTimer)clearInterval(contactTimer);stopAudio();resizeObserver.disconnect();candidateInFlight?.destroy();pet?.destroy();});
 }
+
+
+
+
+
 
 

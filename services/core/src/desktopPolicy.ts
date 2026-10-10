@@ -2,7 +2,7 @@
 export const MAX_DESKTOP_PETS = 20;
 export const canCreatePet = (count: number) => Number.isInteger(count) && count >= 0 && count < MAX_DESKTOP_PETS;
 /** Movement clips are authored with different names; centralize recognition so autonomous movement, edge traversal, and chase use one contract. */
-export function isStandbyActionName(name: string): boolean { return /^(?:idle|relax|stand|rest)(?:[_\s-]*\d+)?$/i.test(name.trim()); }
+export function isStandbyActionName(name: string): boolean { return /^(?:idle|relax|stand|rest)(?:[_\s-]*(?:\d+|[a-z]))?$/i.test(name.trim()); }
 export function isMovementActionName(name: string): boolean {
   const value = name.trim();
   // Authored begin/end are short transition clips, not locomotion cycles. Choosing

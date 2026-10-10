@@ -1,3 +1,4 @@
+import {standbyAnimationName} from './desktopPolicy.js';
 import type {Config} from './config.js';
 import {choosePool,selectRoleVoice} from './roleBehaviour.js';
 
@@ -43,5 +44,5 @@ export function deploymentReturnDelay(action:DeploymentAction,c:Config):number {
 }
 /** Match ordinary standby exactly. Skill/doll Idle suffixes are explicitly selected actions, never automatic deployment follow-ups. */
 export function deploymentStandbyAction<T extends DeploymentAction>(actions:T[],bundleId:string):T|undefined {
- return actions.find(a=>a.bundleId===bundleId&&a.duration>0&&/^(relax|idle|stand)$/i.test(a.name));
+ const own=actions.filter(a=>a.bundleId===bundleId&&a.duration>0),name=standbyAnimationName(own.map(a=>a.name));return own.find(a=>a.name===name);
 }

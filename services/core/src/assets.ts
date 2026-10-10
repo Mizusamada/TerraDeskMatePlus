@@ -47,7 +47,7 @@ export class AssetLibrary {
  constructor(private packagedRoot:string,private dataDir:string){}
  scan(){
   this.files.clear();this.bundles=[];this.voices=[];this.profiles={};this.roleRoots.clear();
-  this.root=this.packagedRoot;
+  this.root=[this.packagedRoot,'D:\\ak'].find(r=>existsSync(path.join(r,'干员模型'))) || this.packagedRoot;
   try{this.renderIndex=JSON.parse(readFileSync(path.join(this.root,'model-render-index.json'),'utf8')).models||{};}catch{this.renderIndex={};}
   // Startup uses a pre-audited metadata catalog for all bundled roles; a changed fingerprint falls back to live inspection.
   try{this.modelCatalog=JSON.parse(readFileSync(path.join(this.root,'model-catalog.json'),'utf8')).models||{};}catch{this.modelCatalog={};}

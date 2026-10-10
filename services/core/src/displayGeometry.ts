@@ -36,3 +36,13 @@ export function extendFrameEnvelope(envelope:DisplayEnvelope,body:{left:number;r
  envelope.bottom=Math.max(envelope.bottom,contact-visible.y);
  return true;
 }
+
+/** Verified catalogs already sampled every action. Convert their body-relative envelope once,
+ * rather than blocking the renderer by replaying thousands of geometry probes on each action-group swap.
+ * Imported/incomplete profiles still use the runtime measured fallback. */
+export function cameraEnvelope(profile:any,sourceScale=1):DisplayEnvelope|null {
+ const height=Number(profile?.bodyHeight),e=profile?.envelope;
+ if(!Number.isFinite(height)||height<=0||!Number.isFinite(sourceScale)||sourceScale<=0||!e)return null;
+ if(!['left','right','top','bottom'].every(k=>Number.isFinite(e[k])&&e[k]>=0)||e.top<=0)return null;
+ return {left:e.left*height*sourceScale,right:e.right*height*sourceScale,top:e.top*height*sourceScale,bottom:e.bottom*height*sourceScale};
+}

@@ -4,7 +4,7 @@ import { spawn } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 export const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 export function electronPath() {
-  const candidates = [process.env.AMIYA_ELECTRON_PATH, path.join(root,'node_modules/electron/dist/electron.exe')];
+  const candidates = [process.env.AMIYA_ELECTRON_PATH, path.join(root,'node_modules/electron/dist/electron.exe'), 'D:/Software/Languages/npm-global/node_modules/electron/dist/electron.exe'];
   const exe = candidates.find(p=>p && existsSync(p));
   if(!exe) throw new Error('找不到 Electron。请安装项目依赖或设置 AMIYA_ELECTRON_PATH。');
   return exe;

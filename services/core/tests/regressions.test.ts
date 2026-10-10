@@ -1,0 +1,13 @@
+import test from 'node:test';import assert from 'node:assert/strict';
+import {livePets} from '../src/lifecycle.js';import {walkStep,chooseRandomAction,floorFor} from '../src/physics.js';import {normalizeConfig,defaults,validateConfig} from '../src/config.js';import {selectableActions} from '../src/animationChoices.js';
+import {llmPresets} from '../src/presets.js';
+test('destroyed windows are removed without touching webContents',()=>{const map=new Map([[1,{win:{isDestroyed:():boolean=>true,get webContents(){throw new Error('destroyed')}}}],[2,{win:{isDestroyed:():boolean=>false}}]]);assert.equal(livePets(map).length,1);assert.equal(map.has(1),false);});
+test('edge overshoot corrects direction once, not oscillating',()=>{let s={x:101,direction:1};const directions=[];for(let i=0;i<30;i++){s=walkStep(s.x,s.direction,0,100);directions.push(s.direction);}assert.deepEqual([...new Set(directions)],[-1]);assert.ok(s.x<90);assert.equal(walkStep(-2,-1,0,100).direction,1);});
+test('random animation avoids setup/death and repeats',()=>{const x=[{name:'Default'},{name:'Die'},{name:'Attack_Begin'},{name:'Relax'},{name:'Sit'}];assert.equal(chooseRandomAction(x,'Relax',()=>0)?.name,'Sit');});
+test('legacy views migrate to action groups with fixed front',()=>{assert.equal(normalizeConfig({assets:{view:'基建'}}).assets.group,'基建');assert.equal(normalizeConfig({assets:{view:'正面'}}).assets.group,'战斗');assert.equal(normalizeConfig({assets:{view:'背面'}}).assets.view,'正面');});
+test('speech, text and subtitles are independent switches',()=>{const c=defaults();c.speech.replyEnabled=false;c.speech.showText=true;c.speech.subtitlesEnabled=true;assert.equal(validateConfig(c).speech.subtitlesEnabled,true);});
+test('six service presets contain HTTPS and no credentials',()=>{assert.equal(llmPresets.length,6);assert.ok(llmPresets.every(p=>new URL(p.baseUrl).protocol==='https:'&&!p.baseUrl.includes('sk-')));});
+
+test('UI removes static Default and duplicate rest/idle, keeps one standby',()=>{const list=selectableActions([{id:'d',name:'Default',duration:0,group:'基建'},{id:'r',name:'Relax',duration:1,group:'基建'},{id:'i',name:'Idle',duration:1,group:'战斗'},{id:'s',name:'Sit',duration:8,group:'基建'}]);assert.deepEqual(list.map(x=>x.displayName),['待机','Sit']);});
+
+test('visible window top is a support surface; taskbar remains the deepest floor',()=>{const area={x:0,y:0,width:1707,height:1019},pet={x:600,y:50,width:560,height:490};assert.equal(floorFor(pet,area,[{x:500,y:600,width:700,height:400}]),110);assert.equal(floorFor({...pet,y:620},area,[]),529);assert.equal(floorFor({...pet,x:20},area,[{x:600,y:600,width:700,height:400}]),529);});

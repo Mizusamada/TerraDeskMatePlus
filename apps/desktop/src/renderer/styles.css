@@ -211,3 +211,4 @@ body[data-view='pet'] .pet-bubble.visible{outline:1px solid rgba(98,209,239,.2);
 /* Image attachments stay small and removable so the chat composer does not move the history unexpectedly. */
 .chat-attachments{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:12px}.attachment-previews{display:flex;gap:8px;flex-wrap:wrap;width:100%}.attachment-chip{position:relative;display:inline-flex;border:1px solid var(--line);padding:3px;background:var(--panel-2)}.attachment-chip img{width:54px;height:54px;object-fit:cover}.attachment-chip button{position:absolute;right:-8px;top:-8px;width:20px;height:20px;padding:0;border-radius:50%;border:1px solid var(--line);background:var(--panel);color:var(--text)}
 
+

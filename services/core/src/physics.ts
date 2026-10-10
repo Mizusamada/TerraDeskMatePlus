@@ -27,7 +27,9 @@ export function walkStep(x:number,direction:number,min:number,max:number,speed=1
  return {x:Math.max(min,Math.min(max,x+d*speed)),direction:d};
 }
 export function chooseRandomAction<T extends {name:string}>(actions:T[],previous='',random=Math.random):T|undefined {
- const eligible=actions.filter(a=>!/^default$|^die$|^start$|_begin$|_end$/i.test(a.name));
+ // Authored setup/death/entrance variants often end invisible or static. Exclude the whole
+ // family from random playback; explicit user-selected actions remain available elsewhere.
+ const eligible=actions.filter(a=>((a as any).duration===undefined||Number((a as any).duration)>0)&&!/^(?:default|die|death|start|appear|spawn|entrance)(?:$|[_\s-])|[_\s-](?:begin|end)$/i.test(a.name));
  const alternate=eligible.filter(a=>a.name!==previous);
  const pool=alternate.length?alternate:eligible;
  return pool[Math.min(pool.length-1,Math.floor(random()*pool.length))];

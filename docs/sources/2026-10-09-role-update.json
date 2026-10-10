@@ -1,0 +1,2199 @@
+{
+  "schemaVersion": 1,
+  "releaseVersion": "0.3.1",
+  "newRoles": [
+    "克莱门莎",
+    "德·托莱多",
+    "旅骨"
+  ],
+  "newSkins": [
+    [
+      "Tragodia",
+      "真我自扼"
+    ],
+    [
+      "Mantra",
+      "万籁俱寂"
+    ],
+    [
+      "Лето",
+      "来日欢歌"
+    ]
+  ],
+  "roleCount": 434,
+  "modelCount": 2853,
+  "spineVersion": "3.8.99",
+  "officialRecordings": 228,
+  "japaneseOriginalTexts": "missing_original; never translated training text",
+  "sources": [
+    {
+      "url": "https://raw.githubusercontent.com/Kengxxiao/ArknightsGameData/master/zh_CN/gamedata/excel/charword_table.json",
+      "sha256": "5d630ffb7973021f351db14e0d9ac112cd58e741468f9f6e64fb2e11c8e70685"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Kengxxiao/ArknightsGameData/master/zh_CN/gamedata/excel/character_table.json",
+      "sha256": "e523c7c83c36e2d76697121079e17d0282da1a94d59a55e1cc55616edf0b41c4"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Kengxxiao/ArknightsGameData/master/zh_CN/gamedata/excel/handbook_info_table.json",
+      "sha256": "7c7da9fb0c7e2421887b5b7f9ca62f792b7353b541d225026a9f8c79828e3f4c"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Kengxxiao/ArknightsGameData/master/zh_CN/gamedata/excel/skin_table.json",
+      "sha256": "422068f02ceec652ec61a4e0e3c0d4dec6371f95b9ea31cae3e1267f536b10d5"
+    },
+    {
+      "url": "https://prts.wiki/w/%E5%B9%B2%E5%91%98%E4%B8%80%E8%A7%88"
+    }
+  ],
+  "files": [
+    {
+      "path": "干员模型/克莱门莎/克莱门莎-原皮/基建/build_char_4231_clemnt.atlas",
+      "source": "https://torappu.prts.wiki/assets/char_spine/char_4231_clemnt/defaultskin/build/build_char_4231_clemnt.atlas",
+      "sha256": "bb41ca5c28ef782621ca78c96c1df711019e35a2fa5daf32f5c349c48b24cb97",
+      "size": 11844
+    },
+    {
+      "path": "干员模型/克莱门莎/克莱门莎-原皮/基建/build_char_4231_clemnt.png",
+      "source": "https://torappu.prts.wiki/assets/char_spine/char_4231_clemnt/defaultskin/build/build_char_4231_clemnt.png",
+      "sha256": "6918a60496076e07dda6655d331fb754158ffe07cd632cb9978cba92604175e5",
+      "size": 195175
+    },
+    {
+      "path": "干员模型/克莱门莎/克莱门莎-原皮/基建/build_char_4231_clemnt.skel",
+      "source": "https://torappu.prts.wiki/assets/char_spine/char_4231_clemnt/defaultskin/build/build_char_4231_clemnt.skel",
+      "sha256": "8d510f6c6f5b894bb67960d5deb2b14faa75bc6b5c8c169245b9bd7a41116e72",
+      "size": 372594
+    },
+    {
+      "path": "干员模型/克莱门莎/克莱门莎-原皮/正面/char_4231_clemnt.atlas",
+      "source": "https://torappu.prts.wiki/assets/char_spine/char_4231_clemnt/defaultskin/front/char_4231_clemnt.atlas",
+      "sha256": "e8e9fdc43cd5e95e8992be229fa93fddae13c6a76d70f39c9ca6927605df9868",
+      "size": 11734
+    },
+    {
+      "path": "干员模型/克莱门莎/克莱门莎-原皮/正面/char_4231_clemnt.png",
+      "source": "https://torappu.prts.wiki/assets/char_spine/char_4231_clemnt/defaultskin/front/char_4231_clemnt.png",
+      "sha256": "663b85b3466864037775fa821e077e61323bbb7ef62561bb56c176cf0ffeaa10",
+      "size": 117291
+    },
+    {
+      "path": "干员模型/克莱门莎/克莱门莎-原皮/正面/char_4231_clemnt.skel",
+      "source": "https://torappu.prts.wiki/assets/char_spine/char_4231_clemnt/defaultskin/front/char_4231_clemnt.skel",
+      "sha256": "c4a72d5785a8c7f381e60512be2d2cdc7e8d5a0fa728b545ead4426a9121fcce",
+      "size": 1014317
+    },
+    {
+      "path": "干员模型/克莱门莎/克莱门莎-原皮/背面/char_4231_clemnt.atlas",
+      "source": "https://torappu.prts.wiki/assets/char_spine/char_4231_clemnt/defaultskin/back/char_4231_clemnt.atlas",
+      "sha256": "0ec0cbd46b02dd7e6e093acaa9b48d03a64a6d48f67b52f2c872e9fe9bd6d144",
+      "size": 7371
+    },
+    {
+      "path": "干员模型/克莱门莎/克莱门莎-原皮/背面/char_4231_clemnt.png",
+      "source": "https://torappu.prts.wiki/assets/char_spine/char_4231_clemnt/defaultskin/back/char_4231_clemnt.png",
+      "sha256": "2990aa11c7325509c3bd45e2f3336ee8a2a633a778269e84b095b0ea05011582",
+      "size": 99804
+    },
+    {
+      "path": "干员模型/克莱门莎/克莱门莎-原皮/背面/char_4231_clemnt.skel",
+      "source": "https://torappu.prts.wiki/assets/char_spine/char_4231_clemnt/defaultskin/back/char_4231_clemnt.skel",
+      "sha256": "5ce8042593c4ed7882a47e5d1d94b204f8dfd6c59a447f8b5899de827194f89b",
+      "size": 510522
+    },
+    {
+      "path": "干员模型/德·托莱多/德·托莱多-原皮/基建/build_char_393_toledo.atlas",
+      "source": "https://torappu.prts.wiki/assets/char_spine/char_393_toledo/defaultskin/build/build_char_393_toledo.atlas",
+      "sha256": "0b64ef878ae2354100dcbef2cc6f643b75b9f29fe75470adcd5d2f25db8e6514",
+      "size": 11144
+    },
+    {
+      "path": "干员模型/德·托莱多/德·托莱多-原皮/基建/build_char_393_toledo.png",
+      "source": "https://torappu.prts.wiki/assets/char_spine/char_393_toledo/defaultskin/build/build_char_393_toledo.png",
+      "sha256": "0d84191fa40384e9cd0ca5a32c348069d528e2f7946f3d5a472b98b95cecceb1",
+      "size": 170816
+    },
+    {
+      "path": "干员模型/德·托莱多/德·托莱多-原皮/基建/build_char_393_toledo.skel",
+      "source": "https://torappu.prts.wiki/assets/char_spine/char_393_toledo/defaultskin/build/build_char_393_toledo.skel",
+      "sha256": "caf9376d6b81aacc2808b827a847d30b5663f83b25dd4e99394fecac491fc301",
+      "size": 226131
+    },
+    {
+      "path": "干员模型/德·托莱多/德·托莱多-原皮/正面/char_393_toledo.atlas",
+      "source": "https://torappu.prts.wiki/assets/char_spine/char_393_toledo/defaultskin/front/char_393_toledo.atlas",
+      "sha256": "999c4352b049f3bf0ff51c481056b34382ddeb78ee6976dd0360880fdb8667d8",
+      "size": 11125
+    },
+    {
+      "path": "干员模型/德·托莱多/德·托莱多-原皮/正面/char_393_toledo.png",
+      "source": "https://torappu.prts.wiki/assets/char_spine/char_393_toledo/defaultskin/front/char_393_toledo.png",
+      "sha256": "8dbbfe841988b42cb531e895b3c2b2cea541a560eae1e58d67bf9bcfa1487ef0",
+      "size": 112721
+    },
+    {
+      "path": "干员模型/德·托莱多/德·托莱多-原皮/正面/char_393_toledo.skel",
+      "source": "https://torappu.prts.wiki/assets/char_spine/char_393_toledo/defaultskin/front/char_393_toledo.skel",
+      "sha256": "e05337aca138013ab3658215df558982edae50bc742b0a10997c13b0db8abe0e",
+      "size": 273689
+    },
+    {
+      "path": "干员模型/德·托莱多/德·托莱多-原皮/背面/char_393_toledo.atlas",
+      "source": "https://torappu.prts.wiki/assets/char_spine/char_393_toledo/defaultskin/back/char_393_toledo.atlas",
+      "sha256": "5fc42a3cd11dda5b9bd39551be4299772b684c26b2f23d32b7a3d65bcfd32c32",
+      "size": 6224
+    },
+    {
+      "path": "干员模型/德·托莱多/德·托莱多-原皮/背面/char_393_toledo.png",
+      "source": "https://torappu.prts.wiki/assets/char_spine/char_393_toledo/defaultskin/back/char_393_toledo.png",
+      "sha256": "9d1c2f50ebc30d6bdd262b93c5845b8dedb76636029c4b40b71337cabddfdc7f",
+      "size": 91691
+    },
+    {
+      "path": "干员模型/德·托莱多/德·托莱多-原皮/背面/char_393_toledo.skel",
+      "source": "https://torappu.prts.wiki/assets/char_spine/char_393_toledo/defaultskin/back/char_393_toledo.skel",
+      "sha256": "83d27e346e049e58d4996a0eb83437bb39175a5c3b5014b314c45ad80fa541aa",
+      "size": 145661
+    },
+    {
+      "path": "干员模型/旅骨/旅骨-原皮/基建/build_char_4232_hbound.atlas",
+      "source": "https://torappu.prts.wiki/assets/char_spine/char_4232_hbound/defaultskin/build/build_char_4232_hbound.atlas",
+      "sha256": "37e232ae11a2d8f7d353ccf6290d1a1a369698720ee2b7fbf92bb967ba09116c",
+      "size": 12003
+    },
+    {
+      "path": "干员模型/旅骨/旅骨-原皮/基建/build_char_4232_hbound.png",
+      "source": "https://torappu.prts.wiki/assets/char_spine/char_4232_hbound/defaultskin/build/build_char_4232_hbound.png",
+      "sha256": "f89013fba540303e8dc9062d68e2bcfe883935c148c1223e7a5d8d1a6beb05ae",
+      "size": 181640
+    },
+    {
+      "path": "干员模型/旅骨/旅骨-原皮/基建/build_char_4232_hbound.skel",
+      "source": "https://torappu.prts.wiki/assets/char_spine/char_4232_hbound/defaultskin/build/build_char_4232_hbound.skel",
+      "sha256": "efb15d6b251907c8627b70694cfded57ddc5c7bb7c9cb22d0bdc8116400b3eb9",
+      "size": 191452
+    },
+    {
+      "path": "干员模型/旅骨/旅骨-原皮/正面/char_4232_hbound.atlas",
+      "source": "https://torappu.prts.wiki/assets/char_spine/char_4232_hbound/defaultskin/front/char_4232_hbound.atlas",
+      "sha256": "0d7cd65c90cc46d3880d982829204fff5dc3e470ba2745846a828567c13552ff",
+      "size": 11890
+    },
+    {
+      "path": "干员模型/旅骨/旅骨-原皮/正面/char_4232_hbound.png",
+      "source": "https://torappu.prts.wiki/assets/char_spine/char_4232_hbound/defaultskin/front/char_4232_hbound.png",
+      "sha256": "aff992c987b79318f7aff6e6bb8d2e642d5904b2343b44808beade2c6f6ebdd2",
+      "size": 111452
+    },
+    {
+      "path": "干员模型/旅骨/旅骨-原皮/正面/char_4232_hbound.skel",
+      "source": "https://torappu.prts.wiki/assets/char_spine/char_4232_hbound/defaultskin/front/char_4232_hbound.skel",
+      "sha256": "fa8991fc76ad881925e0ebc57b4d75874b55a7223ba2580b934220fe125ae514",
+      "size": 237887
+    },
+    {
+      "path": "干员模型/旅骨/旅骨-原皮/背面/char_4232_hbound.atlas",
+      "source": "https://torappu.prts.wiki/assets/char_spine/char_4232_hbound/defaultskin/back/char_4232_hbound.atlas",
+      "sha256": "07fef50f7173bd234cb7f85af526a56b8624dccebe0acd8c05e0a04798ed06d4",
+      "size": 7059
+    },
+    {
+      "path": "干员模型/旅骨/旅骨-原皮/背面/char_4232_hbound.png",
+      "source": "https://torappu.prts.wiki/assets/char_spine/char_4232_hbound/defaultskin/back/char_4232_hbound.png",
+      "sha256": "e4032e5ee4cb5f01a4d651855b1a639591163ba7b841b248c53c08cd867e40f4",
+      "size": 93844
+    },
+    {
+      "path": "干员模型/旅骨/旅骨-原皮/背面/char_4232_hbound.skel",
+      "source": "https://torappu.prts.wiki/assets/char_spine/char_4232_hbound/defaultskin/back/char_4232_hbound.skel",
+      "sha256": "9507466d9d9e45c09e63243b30cac0354a2c42af2cef1be50ca574907c0d3e3d",
+      "size": 109810
+    },
+    {
+      "path": "干员模型/Tragodia/Tragodia-真我自扼/基建/build_char_1042_phatm2_sightseer_4.atlas",
+      "source": "https://torappu.prts.wiki/assets/char_spine/char_1042_phatm2/char_1042_phatm2_sightseer_4/build/build_char_1042_phatm2_sightseer_4.atlas",
+      "sha256": "c01b9a066f6a86dd080e8ece8a23d2eaa72da2d8fd55e085c422915c3f194353",
+      "size": 18287
+    },
+    {
+      "path": "干员模型/Tragodia/Tragodia-真我自扼/基建/build_char_1042_phatm2_sightseer_4.png",
+      "source": "https://torappu.prts.wiki/assets/char_spine/char_1042_phatm2/char_1042_phatm2_sightseer_4/build/build_char_1042_phatm2_sightseer_4.png",
+      "sha256": "6c3e45e2220b4400b4c50cc49b3a40b27c9d7acc0cad1076b326dd091214c01f",
+      "size": 382749
+    },
+    {
+      "path": "干员模型/Tragodia/Tragodia-真我自扼/基建/build_char_1042_phatm2_sightseer_4.skel",
+      "source": "https://torappu.prts.wiki/assets/char_spine/char_1042_phatm2/char_1042_phatm2_sightseer_4/build/build_char_1042_phatm2_sightseer_4.skel",
+      "sha256": "4f3580d5e221b7224e4209101e00169125bafc84b0e4efc2ab92dd15ee9acc41",
+      "size": 604426
+    },
+    {
+      "path": "干员模型/Tragodia/Tragodia-真我自扼/正面/char_1042_phatm2_sightseer_4.atlas",
+      "source": "https://torappu.prts.wiki/assets/char_spine/char_1042_phatm2/char_1042_phatm2_sightseer_4/front/char_1042_phatm2_sightseer_4.atlas",
+      "sha256": "3a87ad80b5dde229c7106b339a98faef1f57495ce19dd4703e3f3a3896a28e93",
+      "size": 18059
+    },
+    {
+      "path": "干员模型/Tragodia/Tragodia-真我自扼/正面/char_1042_phatm2_sightseer_4.png",
+      "source": "https://torappu.prts.wiki/assets/char_spine/char_1042_phatm2/char_1042_phatm2_sightseer_4/front/char_1042_phatm2_sightseer_4.png",
+      "sha256": "74a04b1fc7328435f3ee017496912035bc1b1509c6116570b400d153bc238a19",
+      "size": 233872
+    },
+    {
+      "path": "干员模型/Tragodia/Tragodia-真我自扼/正面/char_1042_phatm2_sightseer_4.skel",
+      "source": "https://torappu.prts.wiki/assets/char_spine/char_1042_phatm2/char_1042_phatm2_sightseer_4/front/char_1042_phatm2_sightseer_4.skel",
+      "sha256": "0f68a32cf19843d53917420fc03a791220bc588a3a4413613e3faec4707edbb5",
+      "size": 764424
+    },
+    {
+      "path": "干员模型/Tragodia/Tragodia-真我自扼/背面/char_1042_phatm2_sightseer_4.atlas",
+      "source": "https://torappu.prts.wiki/assets/char_spine/char_1042_phatm2/char_1042_phatm2_sightseer_4/back/char_1042_phatm2_sightseer_4.atlas",
+      "sha256": "3a87ad80b5dde229c7106b339a98faef1f57495ce19dd4703e3f3a3896a28e93",
+      "size": 18059
+    },
+    {
+      "path": "干员模型/Tragodia/Tragodia-真我自扼/背面/char_1042_phatm2_sightseer_4.png",
+      "source": "https://torappu.prts.wiki/assets/char_spine/char_1042_phatm2/char_1042_phatm2_sightseer_4/back/char_1042_phatm2_sightseer_4.png",
+      "sha256": "74a04b1fc7328435f3ee017496912035bc1b1509c6116570b400d153bc238a19",
+      "size": 233872
+    },
+    {
+      "path": "干员模型/Tragodia/Tragodia-真我自扼/背面/char_1042_phatm2_sightseer_4.skel",
+      "source": "https://torappu.prts.wiki/assets/char_spine/char_1042_phatm2/char_1042_phatm2_sightseer_4/back/char_1042_phatm2_sightseer_4.skel",
+      "sha256": "073df63d822ec0456a43379a066431b06ddd345ecf87f48eacb8f98309671abc",
+      "size": 682733
+    },
+    {
+      "path": "干员模型/Mantra/Mantra-万籁俱寂/基建/build_char_4204_mantra_sightseer_4.atlas",
+      "source": "https://torappu.prts.wiki/assets/char_spine/char_4204_mantra/char_4204_mantra_sightseer_4/build/build_char_4204_mantra_sightseer_4.atlas",
+      "sha256": "cbdc8d15efbeb936569d83776815c68a30b88049bf4cad13d0e9fd1e1f79f25a",
+      "size": 10526
+    },
+    {
+      "path": "干员模型/Mantra/Mantra-万籁俱寂/基建/build_char_4204_mantra_sightseer_4.png",
+      "source": "https://torappu.prts.wiki/assets/char_spine/char_4204_mantra/char_4204_mantra_sightseer_4/build/build_char_4204_mantra_sightseer_4.png",
+      "sha256": "320c69763e1c5b13ede0fd47fec0a0242144a192605bde9a3d23bcb5c0c524f8",
+      "size": 287502
+    },
+    {
+      "path": "干员模型/Mantra/Mantra-万籁俱寂/基建/build_char_4204_mantra_sightseer_4.skel",
+      "source": "https://torappu.prts.wiki/assets/char_spine/char_4204_mantra/char_4204_mantra_sightseer_4/build/build_char_4204_mantra_sightseer_4.skel",
+      "sha256": "e0bc2743b8c62766522b026911d11b7d8565a14c154ed2faa103028f0dfd1f12",
+      "size": 418945
+    },
+    {
+      "path": "干员模型/Mantra/Mantra-万籁俱寂/正面/char_4204_mantra_sightseer_4.atlas",
+      "source": "https://torappu.prts.wiki/assets/char_spine/char_4204_mantra/char_4204_mantra_sightseer_4/front/char_4204_mantra_sightseer_4.atlas",
+      "sha256": "df65435251870353ba308b1ec3a782408283b11f49d893f4b9273167e41a9b12",
+      "size": 9929
+    },
+    {
+      "path": "干员模型/Mantra/Mantra-万籁俱寂/正面/char_4204_mantra_sightseer_4.png",
+      "source": "https://torappu.prts.wiki/assets/char_spine/char_4204_mantra/char_4204_mantra_sightseer_4/front/char_4204_mantra_sightseer_4.png",
+      "sha256": "7a5fb34c3b930a0a40bc46a9247f9bb8d585600c3b7a58272ad4c62140a8ae1c",
+      "size": 160260
+    },
+    {
+      "path": "干员模型/Mantra/Mantra-万籁俱寂/正面/char_4204_mantra_sightseer_4.skel",
+      "source": "https://torappu.prts.wiki/assets/char_spine/char_4204_mantra/char_4204_mantra_sightseer_4/front/char_4204_mantra_sightseer_4.skel",
+      "sha256": "d23b1c4c4164c293457043d6959e5ce7d26c0fbf59768d5a8dadaa96d87d83ae",
+      "size": 466282
+    },
+    {
+      "path": "干员模型/Mantra/Mantra-万籁俱寂/背面/char_4204_mantra_sightseer_4.atlas",
+      "source": "https://torappu.prts.wiki/assets/char_spine/char_4204_mantra/char_4204_mantra_sightseer_4/back/char_4204_mantra_sightseer_4.atlas",
+      "sha256": "2fde56929357ae47702f2ef0a1cfb83a5867c8c2654bb3d5d10b72e678913a29",
+      "size": 6429
+    },
+    {
+      "path": "干员模型/Mantra/Mantra-万籁俱寂/背面/char_4204_mantra_sightseer_4.png",
+      "source": "https://torappu.prts.wiki/assets/char_spine/char_4204_mantra/char_4204_mantra_sightseer_4/back/char_4204_mantra_sightseer_4.png",
+      "sha256": "28e3448ec1f1e6da2d1fba169ff0d7306bf3258f870c36f863161eafb0270b95",
+      "size": 146762
+    },
+    {
+      "path": "干员模型/Mantra/Mantra-万籁俱寂/背面/char_4204_mantra_sightseer_4.skel",
+      "source": "https://torappu.prts.wiki/assets/char_spine/char_4204_mantra/char_4204_mantra_sightseer_4/back/char_4204_mantra_sightseer_4.skel",
+      "sha256": "e1ceab606d8c112f6fc14f70e56857b7d4497568e6fbe34685ac252225db6645",
+      "size": 327646
+    },
+    {
+      "path": "干员模型/Лето/Лето-来日欢歌/基建/build_char_194_leto_sightseer_4.atlas",
+      "source": "https://torappu.prts.wiki/assets/char_spine/char_194_leto/char_194_leto_sightseer_4/build/build_char_194_leto_sightseer_4.atlas",
+      "sha256": "f47e665cafd60bf22b9a72e6a96131657f4e7ed4f1fe2b829339c224fe1f35f4",
+      "size": 13946
+    },
+    {
+      "path": "干员模型/Лето/Лето-来日欢歌/基建/build_char_194_leto_sightseer_4.png",
+      "source": "https://torappu.prts.wiki/assets/char_spine/char_194_leto/char_194_leto_sightseer_4/build/build_char_194_leto_sightseer_4.png",
+      "sha256": "98566d034421a1dcba4fab45334d31fb1885f620c1b5d4ff98c886934fc1985d",
+      "size": 362015
+    },
+    {
+      "path": "干员模型/Лето/Лето-来日欢歌/基建/build_char_194_leto_sightseer_4.skel",
+      "source": "https://torappu.prts.wiki/assets/char_spine/char_194_leto/char_194_leto_sightseer_4/build/build_char_194_leto_sightseer_4.skel",
+      "sha256": "4336acda2b3dedfcbe9a30adeb9af3da39b125a1022429acfdb84c2df08f1734",
+      "size": 402289
+    },
+    {
+      "path": "干员模型/Лето/Лето-来日欢歌/正面/char_194_leto_sightseer_4.atlas",
+      "source": "https://torappu.prts.wiki/assets/char_spine/char_194_leto/char_194_leto_sightseer_4/front/char_194_leto_sightseer_4.atlas",
+      "sha256": "104d74f948401b7c3b6bc679b5f6104047c4adaa9a115f16ea890a9ac47572bb",
+      "size": 10423
+    },
+    {
+      "path": "干员模型/Лето/Лето-来日欢歌/正面/char_194_leto_sightseer_4.png",
+      "source": "https://torappu.prts.wiki/assets/char_spine/char_194_leto/char_194_leto_sightseer_4/front/char_194_leto_sightseer_4.png",
+      "sha256": "e0cba5bc62a9442255ddf59f1e68c895640d9a891418687eb300fa1f720ca181",
+      "size": 130196
+    },
+    {
+      "path": "干员模型/Лето/Лето-来日欢歌/正面/char_194_leto_sightseer_4.skel",
+      "source": "https://torappu.prts.wiki/assets/char_spine/char_194_leto/char_194_leto_sightseer_4/front/char_194_leto_sightseer_4.skel",
+      "sha256": "da9a79270ef48aa658ceec771daa8b062ecac933cb612c8b550389e02844c901",
+      "size": 252218
+    },
+    {
+      "path": "干员模型/Лето/Лето-来日欢歌/背面/char_194_leto_sightseer_4.atlas",
+      "source": "https://torappu.prts.wiki/assets/char_spine/char_194_leto/char_194_leto_sightseer_4/back/char_194_leto_sightseer_4.atlas",
+      "sha256": "43cba55a60d77b549fb51606c518e2b954eccb1b23d6d807db5f467766033840",
+      "size": 5807
+    },
+    {
+      "path": "干员模型/Лето/Лето-来日欢歌/背面/char_194_leto_sightseer_4.png",
+      "source": "https://torappu.prts.wiki/assets/char_spine/char_194_leto/char_194_leto_sightseer_4/back/char_194_leto_sightseer_4.png",
+      "sha256": "97b62de24b165d21493b2a457403e8c450b02a413a308897895b4550f5172ae5",
+      "size": 103608
+    },
+    {
+      "path": "干员模型/Лето/Лето-来日欢歌/背面/char_194_leto_sightseer_4.skel",
+      "source": "https://torappu.prts.wiki/assets/char_spine/char_194_leto/char_194_leto_sightseer_4/back/char_194_leto_sightseer_4.skel",
+      "sha256": "bed43f683009613e7fa9bee992f28f29462da804361d8c5142b7f12c1f0d6c8b",
+      "size": 126151
+    },
+    {
+      "path": "干员语音/克莱门莎/cn_001.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_4231_clemnt/cn_001.mp3",
+      "sha256": "4b792343c186251e303fcbd5d36976ef37c6f800459c66d16b723caa0f042cc4",
+      "size": 132092,
+      "language": "ja",
+      "duration": 16.454717
+    },
+    {
+      "path": "干员语音/克莱门莎/cn_002.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_4231_clemnt/cn_002.mp3",
+      "sha256": "59594a8ad5f1f24ff82d2fab5896028f46fbba8eeeba49ad29ba61b787323dc5",
+      "size": 260405,
+      "language": "ja",
+      "duration": 32.490295
+    },
+    {
+      "path": "干员语音/克莱门莎/cn_004.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_4231_clemnt/cn_004.mp3",
+      "sha256": "6fa90659b0fd8f3623b4cb51ee55bf580c88f59553870655dd13f16388fbc32f",
+      "size": 263749,
+      "language": "ja",
+      "duration": 32.910136
+    },
+    {
+      "path": "干员语音/克莱门莎/cn_003.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_4231_clemnt/cn_003.mp3",
+      "sha256": "b2bc7c0e132d0760b60d3815dcf6cb04100815f34d07c103511a8adae64c8c93",
+      "size": 354028,
+      "language": "ja",
+      "duration": 44.178254
+    },
+    {
+      "path": "干员语音/克莱门莎/cn_005.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_4231_clemnt/cn_005.mp3",
+      "sha256": "d3a6108dca182c87e8908d8a93f2c5c6966a9de4be09c8559235a8f6127f1eb0",
+      "size": 263749,
+      "language": "ja",
+      "duration": 32.905329
+    },
+    {
+      "path": "干员语音/克莱门莎/cn_006.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_4231_clemnt/cn_006.mp3",
+      "sha256": "b04f971f63ad45a84d3893b691c45aef3fe13f9a840463277636fdb4c811c806",
+      "size": 302828,
+      "language": "ja",
+      "duration": 37.79907
+    },
+    {
+      "path": "干员语音/克莱门莎/cn_007.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_4231_clemnt/cn_007.mp3",
+      "sha256": "a71b9211f53ef56701458dd2646d2fe6d8d89b000319658f025fdc02d712361f",
+      "size": 293424,
+      "language": "ja",
+      "duration": 36.619388
+    },
+    {
+      "path": "干员语音/克莱门莎/cn_008.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_4231_clemnt/cn_008.mp3",
+      "sha256": "195b6a7ae0d1f4c180594461532fa8f5ed2443c4f85dbea59360a012d6a136f7",
+      "size": 268346,
+      "language": "ja",
+      "duration": 33.480136
+    },
+    {
+      "path": "干员语音/克莱门莎/cn_009.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_4231_clemnt/cn_009.mp3",
+      "sha256": "ceeba317f869b3bcc3d305d3b5eba033acc0289e77ab2a337eaa90d31cdf27a0",
+      "size": 304709,
+      "language": "ja",
+      "duration": 38.028367
+    },
+    {
+      "path": "干员语音/克莱门莎/cn_010.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_4231_clemnt/cn_010.mp3",
+      "sha256": "377ee1e182d15cc6dcb949e90a745d95a99dd85c903fe8c2785ba30a9c878dd7",
+      "size": 189770,
+      "language": "ja",
+      "duration": 23.66
+    },
+    {
+      "path": "干员语音/克莱门莎/cn_011.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_4231_clemnt/cn_011.mp3",
+      "sha256": "1f21733fbf2f244443b432c80028a9c7c860855936b0950c596b7a397dea5dd4",
+      "size": 219027,
+      "language": "ja",
+      "duration": 27.300726
+    },
+    {
+      "path": "干员语音/克莱门莎/cn_012.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_4231_clemnt/cn_012.mp3",
+      "sha256": "ed90153cdaf424ff3afd766c530636ea9bf6d15f0fcf9c408be6d60895dae811",
+      "size": 26139,
+      "language": "ja",
+      "duration": 3.210385
+    },
+    {
+      "path": "干员语音/克莱门莎/cn_013.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_4231_clemnt/cn_013.mp3",
+      "sha256": "48d58c1899897ed9a4a9bd978999975e4079704abe102050036f153e2f6310d4",
+      "size": 49336,
+      "language": "ja",
+      "duration": 6.1
+    },
+    {
+      "path": "干员语音/克莱门莎/cn_014.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_4231_clemnt/cn_014.mp3",
+      "sha256": "2d7acd9a9f506ccdea188679fcc0d2ef7a24d6611179201465a40aa0ae83e215",
+      "size": 152781,
+      "language": "ja",
+      "duration": 19.029705
+    },
+    {
+      "path": "干员语音/克莱门莎/cn_017.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_4231_clemnt/cn_017.mp3",
+      "sha256": "fd2a1a7153892564a46f673a73e7578a64690fef0774511e156852e0f5631dc6",
+      "size": 62292,
+      "language": "ja",
+      "duration": 7.710522
+    },
+    {
+      "path": "干员语音/克莱门莎/cn_018.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_4231_clemnt/cn_018.mp3",
+      "sha256": "a7aeb462ab2fe21d443aa75d37b903d0eba3b9fafa0547bfb1e341e95eb2146d",
+      "size": 50590,
+      "language": "ja",
+      "duration": 6.262426
+    },
+    {
+      "path": "干员语音/克莱门莎/cn_019.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_4231_clemnt/cn_019.mp3",
+      "sha256": "738a992757344b4bf5a7c7cfc2bf5afbe055191709203f64d71904a63efe2915",
+      "size": 35334,
+      "language": "ja",
+      "duration": 4.34
+    },
+    {
+      "path": "干员语音/克莱门莎/cn_020.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_4231_clemnt/cn_020.mp3",
+      "sha256": "789aa999f176dc525cf48df430ccd4abfb9284ad88677021f2ce20a1ae0ec16e",
+      "size": 51008,
+      "language": "ja",
+      "duration": 6.310567
+    },
+    {
+      "path": "干员语音/克莱门莎/cn_021.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_4231_clemnt/cn_021.mp3",
+      "sha256": "0e9cd66db6f8d5bdc3bc23dffbf5bb45ec3de05ae6b26537e53b3ceff9cdda11",
+      "size": 17989,
+      "language": "ja",
+      "duration": 2.170499
+    },
+    {
+      "path": "干员语音/克莱门莎/cn_022.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_4231_clemnt/cn_022.mp3",
+      "sha256": "cd70582bf329d9db3e4a8433dff433615f5707e74296da48ee34a4c83b2e03b9",
+      "size": 20497,
+      "language": "ja",
+      "duration": 2.484331
+    },
+    {
+      "path": "干员语音/克莱门莎/cn_023.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_4231_clemnt/cn_023.mp3",
+      "sha256": "1ee873293c90a0f5b7ae522a87f00c21a3013a1bc51279950b8ec5311406cf9f",
+      "size": 14436,
+      "language": "ja",
+      "duration": 1.730522
+    },
+    {
+      "path": "干员语音/克莱门莎/cn_024.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_4231_clemnt/cn_024.mp3",
+      "sha256": "c8d32ab3a7e4a0c298a7ad19710a43afb264ec1f06d1f70046657298eadcef5f",
+      "size": 20288,
+      "language": "ja",
+      "duration": 2.48
+    },
+    {
+      "path": "干员语音/克莱门莎/cn_025.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_4231_clemnt/cn_025.mp3",
+      "sha256": "7a224f59e9c3245e6f70a2ec7673ff9fc5d4d47d30d2e3ed1260f15dcca04895",
+      "size": 24258,
+      "language": "ja",
+      "duration": 2.969751
+    },
+    {
+      "path": "干员语音/克莱门莎/cn_026.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_4231_clemnt/cn_026.mp3",
+      "sha256": "74b054f404667ac6fbcbb13bc05e04af74f64bf4956ffd55c4109cd0620511aa",
+      "size": 25930,
+      "language": "ja",
+      "duration": 3.169955
+    },
+    {
+      "path": "干员语音/克莱门莎/cn_027.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_4231_clemnt/cn_027.mp3",
+      "sha256": "3b995efaf0a2c7c9bb3dca4e137aff23616c4c664724dd3bd57560184467e402",
+      "size": 26766,
+      "language": "ja",
+      "duration": 3.286803
+    },
+    {
+      "path": "干员语音/克莱门莎/cn_028.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_4231_clemnt/cn_028.mp3",
+      "sha256": "d6da7a9c80c331190cac24f3d8351800ab1822ea9dff303d84111b99684f115d",
+      "size": 43484,
+      "language": "ja",
+      "duration": 5.367007
+    },
+    {
+      "path": "干员语音/克莱门莎/cn_029.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_4231_clemnt/cn_029.mp3",
+      "sha256": "9c1a9940cc03c5007bc6fc2fd4e88e729ee45b63807ce06b8e481415780aa95c",
+      "size": 68144,
+      "language": "ja",
+      "duration": 8.451655
+    },
+    {
+      "path": "干员语音/克莱门莎/cn_030.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_4231_clemnt/cn_030.mp3",
+      "sha256": "95789916020bf1e9c23fdae5919030c7f47086e5578c0e89902ead34083806fc",
+      "size": 90505,
+      "language": "ja",
+      "duration": 11.251156
+    },
+    {
+      "path": "干员语音/克莱门莎/cn_031.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_4231_clemnt/cn_031.mp3",
+      "sha256": "f6a5f7fe3357f2b461e4bb824c2b35b2c2ede6fa39a4ec2be73ff860615cda40",
+      "size": 71279,
+      "language": "ja",
+      "duration": 8.853673
+    },
+    {
+      "path": "干员语音/克莱门莎/cn_032.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_4231_clemnt/cn_032.mp3",
+      "sha256": "125c80c2dd845564f807daf56ec7f42b82d5346babad8e0f66267c00f68b3436",
+      "size": 56859,
+      "language": "ja",
+      "duration": 7.04
+    },
+    {
+      "path": "干员语音/克莱门莎/cn_033.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_4231_clemnt/cn_033.mp3",
+      "sha256": "4e7f4cca0b50437571f2aabd524c8ab90c8f024d91bc6d31fe1eaba9aff56007",
+      "size": 156124,
+      "language": "ja",
+      "duration": 19.44
+    },
+    {
+      "path": "干员语音/克莱门莎/cn_034.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_4231_clemnt/cn_034.mp3",
+      "sha256": "56778dc389ee9745e28f039ec04733d2eda9c10da220701e6eeb0648d28c27b9",
+      "size": 109940,
+      "language": "ja",
+      "duration": 13.669864
+    },
+    {
+      "path": "干员语音/克莱门莎/cn_036.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_4231_clemnt/cn_036.mp3",
+      "sha256": "c3723757fa80230c886b50b86202eb1e503ed5085d79007ec959c48535c28732",
+      "size": 108268,
+      "language": "ja",
+      "duration": 13.456599
+    },
+    {
+      "path": "干员语音/克莱门莎/cn_037.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_4231_clemnt/cn_037.mp3",
+      "sha256": "3005e74602dc55dc1e2b2b8051fd5ef4a3d2bc37a153c6eaa9c1c6aa6a223078",
+      "size": 9630,
+      "language": "ja",
+      "duration": 1.130023
+    },
+    {
+      "path": "干员语音/克莱门莎/cn_038.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_4231_clemnt/cn_038.mp3",
+      "sha256": "25783ac5f5cb677b308bfaab9ae6c1bcd011bc268ab3186871433e71ca646980",
+      "size": 253091,
+      "language": "ja",
+      "duration": 31.579864
+    },
+    {
+      "path": "干员语音/克莱门莎/cn_042.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_4231_clemnt/cn_042.mp3",
+      "sha256": "e5882215ea18b936bab556b173e7d099c07cb099579ce20ef92fc3d3eb0aaa6b",
+      "size": 47664,
+      "language": "ja",
+      "duration": 5.9
+    },
+    {
+      "path": "干员语音/克莱门莎/cn_043.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_4231_clemnt/cn_043.mp3",
+      "sha256": "26440fd8b4d22561607c4395f5ac2d23ba2c6f32338f66f57474be3094cdee0e",
+      "size": 234283,
+      "language": "ja",
+      "duration": 29.23
+    },
+    {
+      "path": "干员语音/克莱门莎/cn_044.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_4231_clemnt/cn_044.mp3",
+      "sha256": "1cee8ff849d32eb70dd69dec0ba3e3366af311a4b20697b79d96468955b69953",
+      "size": 317666,
+      "language": "ja",
+      "duration": 39.641134
+    },
+    {
+      "path": "干员语音/克莱门莎/zh/cn_002.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_4231_clemnt/cn_002.mp3",
+      "sha256": "60227e14c19c345d58cbe593bd68a9d18d43ecff802a2c3074434cd0a0a8ed24",
+      "size": 176186,
+      "language": "zh",
+      "duration": 21.958118
+    },
+    {
+      "path": "干员语音/克莱门莎/zh/cn_001.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_4231_clemnt/cn_001.mp3",
+      "sha256": "aac2a61a2455574fef0b772d10a004cc84b4e8b8576e9ccd5f2379afb0ba1dea",
+      "size": 102834,
+      "language": "zh",
+      "duration": 12.786304
+    },
+    {
+      "path": "干员语音/克莱门莎/zh/cn_003.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_4231_clemnt/cn_003.mp3",
+      "sha256": "3dbe36bb2d98e749816482668cf1aecbeae6769fb2cdb686a156205179ac84f0",
+      "size": 191860,
+      "language": "zh",
+      "duration": 23.92102
+    },
+    {
+      "path": "干员语音/克莱门莎/zh/cn_004.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_4231_clemnt/cn_004.mp3",
+      "sha256": "fc9c5bed1b69afeb4c23ccba24932dae23c7cf186a4d743005f4ff5bb0d4483f",
+      "size": 229685,
+      "language": "zh",
+      "duration": 28.650204
+    },
+    {
+      "path": "干员语音/克莱门莎/zh/cn_005.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_4231_clemnt/cn_005.mp3",
+      "sha256": "d8833da7bd5b7f4b90d62109a4930b785c3bb7c4ca8e9e124906ddbcec2b68da",
+      "size": 217146,
+      "language": "zh",
+      "duration": 27.066236
+    },
+    {
+      "path": "干员语音/克莱门莎/zh/cn_006.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_4231_clemnt/cn_006.mp3",
+      "sha256": "1c8822890c85cf492254fe4e4aca861a7aa7cbec26b8cd554b505e4067ad6c60",
+      "size": 202727,
+      "language": "zh",
+      "duration": 25.284354
+    },
+    {
+      "path": "干员语音/克莱门莎/zh/cn_007.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_4231_clemnt/cn_007.mp3",
+      "sha256": "e2f95b670a08cc3acc589522e868b7e88de04b0af50a0228a0c7cc676605406a",
+      "size": 193114,
+      "language": "zh",
+      "duration": 24.075578
+    },
+    {
+      "path": "干员语音/克莱门莎/zh/cn_008.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_4231_clemnt/cn_008.mp3",
+      "sha256": "d58b0c79d965b0b52627457450e72b0282e246cd19d022a54ed3ad6bb7003814",
+      "size": 214639,
+      "language": "zh",
+      "duration": 26.767755
+    },
+    {
+      "path": "干员语音/克莱门莎/zh/cn_009.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_4231_clemnt/cn_009.mp3",
+      "sha256": "38a3a7cc684b0b508cad2779175a7c8ba6ef92d95b758923ef3c35861641c1d7",
+      "size": 200219,
+      "language": "zh",
+      "duration": 24.949342
+    },
+    {
+      "path": "干员语音/克莱门莎/zh/cn_010.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_4231_clemnt/cn_010.mp3",
+      "sha256": "dbb291592956eff39bf43f57670aa8ff194638fddb8fdf593011ebb5a06cba47",
+      "size": 146302,
+      "language": "zh",
+      "duration": 18.230771
+    },
+    {
+      "path": "干员语音/克莱门莎/zh/cn_011.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_4231_clemnt/cn_011.mp3",
+      "sha256": "ba628f18693ea82fb47d449da4ead02399ce5b89642700b961c0b7c65e142a27",
+      "size": 128539,
+      "language": "zh",
+      "duration": 16.006485
+    },
+    {
+      "path": "干员语音/克莱门莎/zh/cn_012.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_4231_clemnt/cn_012.mp3",
+      "sha256": "00e03a0539fe94b56b3fc726977bd01de4534b6b6cc8d824a586bbaeec498de9",
+      "size": 11928,
+      "language": "zh",
+      "duration": 1.43619
+    },
+    {
+      "path": "干员语音/克莱门莎/zh/cn_013.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_4231_clemnt/cn_013.mp3",
+      "sha256": "8d4434ac19b9edf5237ab5e10f8cdddcc90ddec8d301e961e7ba0909771581bf",
+      "size": 39096,
+      "language": "zh",
+      "duration": 4.810136
+    },
+    {
+      "path": "干员语音/克莱门莎/zh/cn_014.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_4231_clemnt/cn_014.mp3",
+      "sha256": "188d01bb3856aa0e774079e521353c45d9ee35e0f7308f0b15d0a5f9c8e8d237",
+      "size": 96356,
+      "language": "zh",
+      "duration": 11.980091
+    },
+    {
+      "path": "干员语音/克莱门莎/zh/cn_017.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_4231_clemnt/cn_017.mp3",
+      "sha256": "a28dc464a159910c943c6846214cb40d003e32a6f27f8fd005da693a7611edaa",
+      "size": 36797,
+      "language": "zh",
+      "duration": 4.527868
+    },
+    {
+      "path": "干员语音/克莱门莎/zh/cn_018.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_4231_clemnt/cn_018.mp3",
+      "sha256": "a433bbda49779b4742e15a4d2503d3d5cd16973b56ca72c2e668ed493ed98336",
+      "size": 30946,
+      "language": "zh",
+      "duration": 3.807052
+    },
+    {
+      "path": "干员语音/克莱门莎/zh/cn_019.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_4231_clemnt/cn_019.mp3",
+      "sha256": "cd831e11eb3fcecfe0f620ec86b4e7542f690c903a7cc4f1dcfeb66af3fc0d8f",
+      "size": 36588,
+      "language": "zh",
+      "duration": 4.496667
+    },
+    {
+      "path": "干员语音/克莱门莎/zh/cn_020.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_4231_clemnt/cn_020.mp3",
+      "sha256": "01163d9255d7954beb6af128e925492deb6141a996bc808c6dcbb5c5d7c85a90",
+      "size": 45156,
+      "language": "zh",
+      "duration": 5.588776
+    },
+    {
+      "path": "干员语音/克莱门莎/zh/cn_021.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_4231_clemnt/cn_021.mp3",
+      "sha256": "3600a9019d874ba4a76a42c2cf4d23a92308ad73c15c3fe1c1beeffd8eba36ef",
+      "size": 13600,
+      "language": "zh",
+      "duration": 1.643923
+    },
+    {
+      "path": "干员语音/克莱门莎/zh/cn_022.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_4231_clemnt/cn_022.mp3",
+      "sha256": "8c896d7c7778cae81fc5bb340bb51e189f4f9e6126fe7d1d5379fd3dfcba3497",
+      "size": 14227,
+      "language": "zh",
+      "duration": 1.706621
+    },
+    {
+      "path": "干员语音/克莱门莎/zh/cn_023.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_4231_clemnt/cn_023.mp3",
+      "sha256": "d2781e4997b463ababeb792cdfb9abf6aed33eac082128927b1f1774152caaad",
+      "size": 15690,
+      "language": "zh",
+      "duration": 1.901655
+    },
+    {
+      "path": "干员语音/克莱门莎/zh/cn_024.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_4231_clemnt/cn_024.mp3",
+      "sha256": "a7e3683ddd8b0b4505f66d8126778b2a1f7c8bccc8c9c0c39d9d41e9d4b71069",
+      "size": 14227,
+      "language": "zh",
+      "duration": 1.702177
+    },
+    {
+      "path": "干员语音/克莱门莎/zh/cn_025.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_4231_clemnt/cn_025.mp3",
+      "sha256": "7f155187ea0b84d10c75db4d00862e03bde2e388b5c642499bd6e71853e00bad",
+      "size": 17362,
+      "language": "zh",
+      "duration": 2.099569
+    },
+    {
+      "path": "干员语音/克莱门莎/zh/cn_026.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_4231_clemnt/cn_026.mp3",
+      "sha256": "88011e15b8501a8498190b94ce1159e293be5bc37df7e9562141eeea2fb7fa8c",
+      "size": 16317,
+      "language": "zh",
+      "duration": 1.975465
+    },
+    {
+      "path": "干员语音/克莱门莎/zh/cn_027.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_4231_clemnt/cn_027.mp3",
+      "sha256": "efac9c99fe67c8605facb69bd2c27c91f2ef72b7e40155053e1d44e36b5e55c6",
+      "size": 16735,
+      "language": "zh",
+      "duration": 2.014376
+    },
+    {
+      "path": "干员语音/克莱门莎/zh/cn_028.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_4231_clemnt/cn_028.mp3",
+      "sha256": "322ecba2c9c22ff68189cf03010df18c008a41b8641a7263c0734bef0a29bf9b",
+      "size": 44529,
+      "language": "zh",
+      "duration": 5.486984
+    },
+    {
+      "path": "干员语音/克莱门莎/zh/cn_029.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_4231_clemnt/cn_029.mp3",
+      "sha256": "384c0a22f976bc33681bbff968d1a7aa7f7dc6359a643ef190beb397848793a1",
+      "size": 64800,
+      "language": "zh",
+      "duration": 8.044603
+    },
+    {
+      "path": "干员语音/克莱门莎/zh/cn_030.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_4231_clemnt/cn_030.mp3",
+      "sha256": "c8a5f0e363b3c148c96a7d3093ef20ac73dea05406cca4eb254c310b49faba32",
+      "size": 70652,
+      "language": "zh",
+      "duration": 8.752086
+    },
+    {
+      "path": "干员语音/克莱门莎/zh/cn_031.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_4231_clemnt/cn_031.mp3",
+      "sha256": "b76dcb2a0feb5e5856fc52061bf5a347f831049820d4ddf2c612b6b8296f98c3",
+      "size": 75458,
+      "language": "zh",
+      "duration": 9.371406
+    },
+    {
+      "path": "干员语音/克莱门莎/zh/cn_032.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_4231_clemnt/cn_032.mp3",
+      "sha256": "a8bd05f5c1b7bf601ec23e82af4f7ac179360d5681b56e9fde3c9a9a735f0f45",
+      "size": 51008,
+      "language": "zh",
+      "duration": 6.306871
+    },
+    {
+      "path": "干员语音/克莱门莎/zh/cn_033.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_4231_clemnt/cn_033.mp3",
+      "sha256": "d1ddf972b394dfb59dd6f50fd8ca5887aaa59f23660d727a2d76d43f68621aa8",
+      "size": 87370,
+      "language": "zh",
+      "duration": 10.856712
+    },
+    {
+      "path": "干员语音/克莱门莎/zh/cn_034.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_4231_clemnt/cn_034.mp3",
+      "sha256": "a12b752e8c705f4bf5a347a354b5c215c1880a25512a29105097f317e0b261bb",
+      "size": 83608,
+      "language": "zh",
+      "duration": 10.377188
+    },
+    {
+      "path": "干员语音/克莱门莎/zh/cn_036.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_4231_clemnt/cn_036.mp3",
+      "sha256": "bd7ab3a3705f4c892949d153a3059c5fd2afaa8bc355cf7edb4846b7e0e9e021",
+      "size": 51843,
+      "language": "zh",
+      "duration": 6.419864
+    },
+    {
+      "path": "干员语音/克莱门莎/zh/cn_037.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_4231_clemnt/cn_037.mp3",
+      "sha256": "f6ac53e81b3ebabcea5bc5613d75fca400cc382a87c9a85f85eecbf3fbb8feba",
+      "size": 8794,
+      "language": "zh",
+      "duration": 1.023197
+    },
+    {
+      "path": "干员语音/克莱门莎/zh/cn_038.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_4231_clemnt/cn_038.mp3",
+      "sha256": "53b738f5babc97f3e5552fd36d274d4a32f84f31c2ab86d0ce78696289af401a",
+      "size": 169917,
+      "language": "zh",
+      "duration": 21.161293
+    },
+    {
+      "path": "干员语音/克莱门莎/zh/cn_042.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_4231_clemnt/cn_042.mp3",
+      "sha256": "2aba3934712ce5c9934b7464fccc2359ce61b292f8366ac82fa59c76f0d301de",
+      "size": 39932,
+      "language": "zh",
+      "duration": 4.921066
+    },
+    {
+      "path": "干员语音/克莱门莎/zh/cn_043.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_4231_clemnt/cn_043.mp3",
+      "sha256": "53d3ceec9251e99e75a9c03065b4e2441c841be4128624bc076aabd9d47d3314",
+      "size": 170335,
+      "language": "zh",
+      "duration": 21.212789
+    },
+    {
+      "path": "干员语音/克莱门莎/zh/cn_044.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_4231_clemnt/cn_044.mp3",
+      "sha256": "2d17fc0e8507b4d8d382e01137237214c97b50cacaceab7da30be8e930c0aacb",
+      "size": 201055,
+      "language": "zh",
+      "duration": 25.067506
+    },
+    {
+      "path": "干员语音/德·托莱多/cn_001.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_393_toledo/cn_001.mp3",
+      "sha256": "9a1b76ccc5b8782c8cb23995dc467e211e35028d8d035dac8156e36655ad344c",
+      "size": 193532,
+      "language": "ja",
+      "duration": 24.137075
+    },
+    {
+      "path": "干员语音/德·托莱多/cn_002.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_393_toledo/cn_002.mp3",
+      "sha256": "081344bde60c5822f3dbb22db2a02694b2d7a967358d4c8a805c80cf2088ab61",
+      "size": 211086,
+      "language": "ja",
+      "duration": 26.320136
+    },
+    {
+      "path": "干员语音/德·托莱多/cn_003.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_393_toledo/cn_003.mp3",
+      "sha256": "4784a475eb4b59c57e4ee9a5f48f67aca6a3b9158d18d6772478645a41342fc8",
+      "size": 241388,
+      "language": "ja",
+      "duration": 30.115147
+    },
+    {
+      "path": "干员语音/德·托莱多/cn_004.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_393_toledo/cn_004.mp3",
+      "sha256": "94bb085f07e2ec7a5e615efdcb8ba9c9802ba4afc18d00388565d4cdf4461386",
+      "size": 260614,
+      "language": "ja",
+      "duration": 32.500272
+    },
+    {
+      "path": "干员语音/德·托莱多/cn_005.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_393_toledo/cn_005.mp3",
+      "sha256": "639c64584b8ef24e40525ca1e9ccb3f09cfdfff397c7d3036fbf0bd748301916",
+      "size": 213803,
+      "language": "ja",
+      "duration": 26.66
+    },
+    {
+      "path": "干员语音/德·托莱多/cn_006.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_393_toledo/cn_006.mp3",
+      "sha256": "bf1d86110ace2553d42cd19caaa5f13094c8783c89612a598b0337e77e8705a9",
+      "size": 197293,
+      "language": "ja",
+      "duration": 24.6
+    },
+    {
+      "path": "干员语音/德·托莱多/cn_007.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_393_toledo/cn_007.mp3",
+      "sha256": "3af7aa1b39fec7adf21d88651d699fda26d80716da06f8c9c1fb2e4adb57d7ce",
+      "size": 243269,
+      "language": "ja",
+      "duration": 30.341066
+    },
+    {
+      "path": "干员语音/德·托莱多/cn_008.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_393_toledo/cn_008.mp3",
+      "sha256": "c7e6c5a637c0397bb8ab83aecdb914c6c783efe19c5372f49c328ffd608faba8",
+      "size": 255599,
+      "language": "ja",
+      "duration": 31.88
+    },
+    {
+      "path": "干员语音/德·托莱多/cn_010.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_393_toledo/cn_010.mp3",
+      "sha256": "0327556d8dc6a2d796b243ceb1b4702491b8a8cef7d499d683929b7e30cfbabc",
+      "size": 89251,
+      "language": "ja",
+      "duration": 11.1
+    },
+    {
+      "path": "干员语音/德·托莱多/cn_009.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_393_toledo/cn_009.mp3",
+      "sha256": "495b50c7fcd8f553c3c6ea1d99e955167640c40833f1b26039609957785c4a76",
+      "size": 259778,
+      "language": "ja",
+      "duration": 32.407007
+    },
+    {
+      "path": "干员语音/德·托莱多/cn_011.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_393_toledo/cn_011.mp3",
+      "sha256": "8b6ca4d328c164b613d60cab3e959626b3370a824b64b60e0822707a0951503c",
+      "size": 186844,
+      "language": "ja",
+      "duration": 23.280385
+    },
+    {
+      "path": "干员语音/德·托莱多/cn_012.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_393_toledo/cn_012.mp3",
+      "sha256": "e33a5d679b7b5460ce22b76e871f10a7c8e16622681ad59cf870dbc70644a39b",
+      "size": 86534,
+      "language": "ja",
+      "duration": 10.74
+    },
+    {
+      "path": "干员语音/德·托莱多/cn_013.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_393_toledo/cn_013.mp3",
+      "sha256": "5c333f5b2f26f452ead2ed87d9b2920cb4c2ad33f4d8b35c75d337970a98ddae",
+      "size": 129584,
+      "language": "ja",
+      "duration": 16.135034
+    },
+    {
+      "path": "干员语音/德·托莱多/cn_014.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_393_toledo/cn_014.mp3",
+      "sha256": "b3f8eb8dab9bd6b94c2d6d56f7927c7524b37ac5ad0392fe29e0cf5658c424d4",
+      "size": 164066,
+      "language": "ja",
+      "duration": 20.435125
+    },
+    {
+      "path": "干员语音/德·托莱多/cn_017.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_393_toledo/cn_017.mp3",
+      "sha256": "c4bb7b44c6e9719957da025df01c7c1e10a7eb63de34a7901ccee89499118a77",
+      "size": 166991,
+      "language": "ja",
+      "duration": 20.81585
+    },
+    {
+      "path": "干员语音/德·托莱多/cn_018.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_393_toledo/cn_018.mp3",
+      "sha256": "52bb85706afbbf2118da97a330e958656c852d3af967fbc0fe94811c77c7286b",
+      "size": 180993,
+      "language": "ja",
+      "duration": 22.56
+    },
+    {
+      "path": "干员语音/德·托莱多/cn_019.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_393_toledo/cn_019.mp3",
+      "sha256": "dfdeac667209d39cca6857460a51f156cd611f1ad8a47c7b1fc8f85ddcef385f",
+      "size": 58322,
+      "language": "ja",
+      "duration": 7.220091
+    },
+    {
+      "path": "干员语音/德·托莱多/cn_020.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_393_toledo/cn_020.mp3",
+      "sha256": "d51860e0e48b95035148cb880f091a337f913c5d66619af04916802255a8e914",
+      "size": 57695,
+      "language": "ja",
+      "duration": 7.137143
+    },
+    {
+      "path": "干员语音/德·托莱多/cn_021.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_393_toledo/cn_021.mp3",
+      "sha256": "cda1eb65f3ce799c97f8903ef33159a6905df07749a50689054d5f0608aaca0c",
+      "size": 112866,
+      "language": "ja",
+      "duration": 14.030635
+    },
+    {
+      "path": "干员语音/德·托莱多/cn_022.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_393_toledo/cn_022.mp3",
+      "sha256": "525b36b3724e1d9994e3e15d0d77019e8c1195e6a594ab5bfaa55e778ec405a4",
+      "size": 79220,
+      "language": "ja",
+      "duration": 9.831156
+    },
+    {
+      "path": "干员语音/德·托莱多/cn_023.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_393_toledo/cn_023.mp3",
+      "sha256": "ef580b5bf423b5bd33fa032cc7b0a3b6df349660e0ddfb0cde89a3e9e37f7293",
+      "size": 82354,
+      "language": "ja",
+      "duration": 10.22
+    },
+    {
+      "path": "干员语音/德·托莱多/cn_024.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_393_toledo/cn_024.mp3",
+      "sha256": "c4eec4e1b041b836c4197cfb17879a8a316f2292af082761df7b1c5ae55eb4c7",
+      "size": 65845,
+      "language": "ja",
+      "duration": 8.169773
+    },
+    {
+      "path": "干员语音/德·托莱多/cn_025.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_393_toledo/cn_025.mp3",
+      "sha256": "55a87536f533e69898e0b5c2d94e821cb9c4f6b81ab1948d740e20569087f204",
+      "size": 66472,
+      "language": "ja",
+      "duration": 8.248413
+    },
+    {
+      "path": "干员语音/德·托莱多/cn_026.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_393_toledo/cn_026.mp3",
+      "sha256": "82b42209568be12e0f2dd122d4b47f94693b96edfe955cfc267a104eb5e33287",
+      "size": 76712,
+      "language": "ja",
+      "duration": 9.52
+    },
+    {
+      "path": "干员语音/德·托莱多/cn_027.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_393_toledo/cn_027.mp3",
+      "sha256": "bffdb8b7b47678bd0fe42c9a2bc6172407de5df8953b5b8fb53d630decd60fd0",
+      "size": 75040,
+      "language": "ja",
+      "duration": 9.32
+    },
+    {
+      "path": "干员语音/德·托莱多/cn_028.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_393_toledo/cn_028.mp3",
+      "sha256": "cce1a446ebb6988fae67b1da3128e213119332bf413cc5e8f6d64d2f27e8c7cb",
+      "size": 79638,
+      "language": "ja",
+      "duration": 9.88
+    },
+    {
+      "path": "干员语音/德·托莱多/cn_030.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_393_toledo/cn_030.mp3",
+      "sha256": "5743a1a7ec11dbbd439b68d439080fb8008577ef8f715e9db324d0c609a0f310",
+      "size": 109313,
+      "language": "ja",
+      "duration": 13.590431
+    },
+    {
+      "path": "干员语音/德·托莱多/cn_029.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_393_toledo/cn_029.mp3",
+      "sha256": "9a73f58bf5b12b4ad201d47b1cfbef589162f1742feabed401bb2a4c8e848b4b",
+      "size": 179739,
+      "language": "ja",
+      "duration": 22.390658
+    },
+    {
+      "path": "干员语音/德·托莱多/cn_031.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_393_toledo/cn_031.mp3",
+      "sha256": "160c62733593096ad1dc2685547ef38eca89665af67ca915491cb3fa2deca299",
+      "size": 154034,
+      "language": "ja",
+      "duration": 19.189683
+    },
+    {
+      "path": "干员语音/德·托莱多/cn_032.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_393_toledo/cn_032.mp3",
+      "sha256": "cadcee947fb269ceeec269b04d198c66be8fa3ee572616d90dc5c2bfa58baafe",
+      "size": 96565,
+      "language": "ja",
+      "duration": 12
+    },
+    {
+      "path": "干员语音/德·托莱多/cn_033.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_393_toledo/cn_033.mp3",
+      "sha256": "da6c6852c4c8687ca8364da254c59fe979e918f24b969509db151d46eba97509",
+      "size": 120807,
+      "language": "ja",
+      "duration": 15.03059
+    },
+    {
+      "path": "干员语音/德·托莱多/cn_034.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_393_toledo/cn_034.mp3",
+      "sha256": "5417b7f59098955f2f299f3974ca3ef1b26c70211368020fa08c7ec1f60105b2",
+      "size": 39723,
+      "language": "ja",
+      "duration": 4.910476
+    },
+    {
+      "path": "干员语音/德·托莱多/cn_036.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_393_toledo/cn_036.mp3",
+      "sha256": "5adf215386286ce29893aadf1669a31b5818fc10db78fc1cdb7402e856ee90dd",
+      "size": 59785,
+      "language": "ja",
+      "duration": 7.416395
+    },
+    {
+      "path": "干员语音/德·托莱多/cn_037.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_393_toledo/cn_037.mp3",
+      "sha256": "bceaca47063675be25fbae793699378ff79328b7880cdd2f03d5aafa76a99127",
+      "size": 8794,
+      "language": "ja",
+      "duration": 1.04
+    },
+    {
+      "path": "干员语音/德·托莱多/cn_038.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_393_toledo/cn_038.mp3",
+      "sha256": "cb97570475f4e8b103d033ea85726acf6b657609210992b78fa5288141e4ff54",
+      "size": 152154,
+      "language": "ja",
+      "duration": 18.955669
+    },
+    {
+      "path": "干员语音/德·托莱多/cn_042.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_393_toledo/cn_042.mp3",
+      "sha256": "21fce2260202a1beaed8bcbc4658db00de1dde2cc7de1694ece22f209ffd2926",
+      "size": 71488,
+      "language": "ja",
+      "duration": 8.880068
+    },
+    {
+      "path": "干员语音/德·托莱多/cn_043.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_393_toledo/cn_043.mp3",
+      "sha256": "87530ccb16577b7312f2ae9e59f0cd7def6b3eec4652a1300193cb1e8bcc889c",
+      "size": 226759,
+      "language": "ja",
+      "duration": 28.290091
+    },
+    {
+      "path": "干员语音/德·托莱多/cn_044.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_393_toledo/cn_044.mp3",
+      "sha256": "0c76c47ad8ed7d9b55de645e51072e943108396405af4d68ac72572e36231de1",
+      "size": 172843,
+      "language": "ja",
+      "duration": 21.546871
+    },
+    {
+      "path": "干员语音/德·托莱多/zh/cn_002.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_393_toledo/cn_002.mp3",
+      "sha256": "c396e2b73b0f7d3524ef92b19ab473c963ba0752a233bd7df5ed196efa3a45b7",
+      "size": 161558,
+      "language": "zh",
+      "duration": 20.137551
+    },
+    {
+      "path": "干员语音/德·托莱多/zh/cn_001.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_393_toledo/cn_001.mp3",
+      "sha256": "1166e9e8a86a937164a0bf9d2ac64dd68370a0c3027b386bc85772e49a0ad554",
+      "size": 127076,
+      "language": "zh",
+      "duration": 15.814694
+    },
+    {
+      "path": "干员语音/德·托莱多/zh/cn_004.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_393_toledo/cn_004.mp3",
+      "sha256": "4a069f3452765805e11a2e8146a0979e6e14461f066eabe038251a733a3a25c2",
+      "size": 188516,
+      "language": "zh",
+      "duration": 23.492676
+    },
+    {
+      "path": "干员语音/德·托莱多/zh/cn_003.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_393_toledo/cn_003.mp3",
+      "sha256": "59bf1cbbebd45dfabe694f19631dba7f6e6a282854a2d01e13381d2e91595081",
+      "size": 159468,
+      "language": "zh",
+      "duration": 19.859683
+    },
+    {
+      "path": "干员语音/德·托莱多/zh/cn_005.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_393_toledo/cn_005.mp3",
+      "sha256": "3492df69872d5baa6dcce40eda0094ff8b82df6799cb036f71286c0de8cbfcd0",
+      "size": 150691,
+      "language": "zh",
+      "duration": 18.766757
+    },
+    {
+      "path": "干员语音/德·托莱多/zh/cn_006.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_393_toledo/cn_006.mp3",
+      "sha256": "72bdcd131608e428a8ad7649f8211dfa2f4807e7dfa9000b2e64be2c21522988",
+      "size": 137525,
+      "language": "zh",
+      "duration": 17.130204
+    },
+    {
+      "path": "干员语音/德·托莱多/zh/cn_007.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_393_toledo/cn_007.mp3",
+      "sha256": "d958e43233aa8531d9a907f8a8afbf8cbb53ab8090446699bdec45e44527bb45",
+      "size": 143794,
+      "language": "zh",
+      "duration": 17.903673
+    },
+    {
+      "path": "干员语音/德·托莱多/zh/cn_008.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_393_toledo/cn_008.mp3",
+      "sha256": "b0df650decd4add89e2b94ffaa98005903cd32c3a7c6f0d43cc4aeef088c843f",
+      "size": 170753,
+      "language": "zh",
+      "duration": 21.267302
+    },
+    {
+      "path": "干员语音/德·托莱多/zh/cn_009.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_393_toledo/cn_009.mp3",
+      "sha256": "0aded8fd514ac6f10a539094fe5da3c349e8237e4bea40618861903372e445c6",
+      "size": 137734,
+      "language": "zh",
+      "duration": 17.137392
+    },
+    {
+      "path": "干员语音/德·托莱多/zh/cn_010.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_393_toledo/cn_010.mp3",
+      "sha256": "24fa54edd1c64a2c75296a38b51a262bf61c62f1ce586f3962e01c169f28a1c6",
+      "size": 47455,
+      "language": "zh",
+      "duration": 5.854739
+    },
+    {
+      "path": "干员语音/德·托莱多/zh/cn_011.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_393_toledo/cn_011.mp3",
+      "sha256": "6130dc29b4eaadc6f55cb783c51ab234747561d0bd80dd49de79525cb183cc9c",
+      "size": 121643,
+      "language": "zh",
+      "duration": 15.148254
+    },
+    {
+      "path": "干员语音/德·托莱多/zh/cn_012.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_393_toledo/cn_012.mp3",
+      "sha256": "a725925b9db2d03aae71063067fa8acd1f0cd1bb4b9df31bf1d1817f83575d6e",
+      "size": 70443,
+      "language": "zh",
+      "duration": 8.739637
+    },
+    {
+      "path": "干员语音/德·托莱多/zh/cn_013.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_393_toledo/cn_013.mp3",
+      "sha256": "19b2b8d5893dfbc56c5b4e31936251105c8154ef2dacac75f60f4322164cc418",
+      "size": 78384,
+      "language": "zh",
+      "duration": 9.729977
+    },
+    {
+      "path": "干员语音/德·托莱多/zh/cn_014.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_393_toledo/cn_014.mp3",
+      "sha256": "46b790d7cb450411a493e9ac979580a3e4a4fc99f6857e02e1a6eedbf88857ef",
+      "size": 103461,
+      "language": "zh",
+      "duration": 12.856281
+    },
+    {
+      "path": "干员语音/德·托莱多/zh/cn_017.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_393_toledo/cn_017.mp3",
+      "sha256": "1d1a297baeaf8870685b88807a31d9f9f23cebdef926336ee1f3931ddbf489c2",
+      "size": 94266,
+      "language": "zh",
+      "duration": 11.712721
+    },
+    {
+      "path": "干员语音/德·托莱多/zh/cn_018.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_393_toledo/cn_018.mp3",
+      "sha256": "1f6dc01973dda94792b2362c7542a5675f1ab52de1add6439f0ff919ab89d641",
+      "size": 104715,
+      "language": "zh",
+      "duration": 13.02839
+    },
+    {
+      "path": "干员语音/德·托莱多/zh/cn_019.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_393_toledo/cn_019.mp3",
+      "sha256": "cad1557d30869852a2301d0b04d1563cb331e987f9d4bc77f69c7009b046736e",
+      "size": 33662,
+      "language": "zh",
+      "duration": 4.130567
+    },
+    {
+      "path": "干员语音/德·托莱多/zh/cn_020.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_393_toledo/cn_020.mp3",
+      "sha256": "75bb63166917fc05004a7cd5bbd85a4786652a1d2041e60b1bb23ebe471f0305",
+      "size": 38051,
+      "language": "zh",
+      "duration": 4.693492
+    },
+    {
+      "path": "干员语音/德·托莱多/zh/cn_021.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_393_toledo/cn_021.mp3",
+      "sha256": "ce0365820e57798610a899283aadddaa8e24293a159b7e8e18a9602a64a6f8c8",
+      "size": 75458,
+      "language": "zh",
+      "duration": 9.376916
+    },
+    {
+      "path": "干员语音/德·托莱多/zh/cn_022.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_393_toledo/cn_022.mp3",
+      "sha256": "f91afcb88b60a7326db46d55554a16074d0d9c1ac79caf328fefc4c57ba2fbe0",
+      "size": 40768,
+      "language": "zh",
+      "duration": 5.029841
+    },
+    {
+      "path": "干员语音/德·托莱多/zh/cn_023.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_393_toledo/cn_023.mp3",
+      "sha256": "f2ac98e04a8dea0fe3f7f352a23acaa0d5e7202c31498c1f97a5392ac70e3ea7",
+      "size": 52679,
+      "language": "zh",
+      "duration": 6.505737
+    },
+    {
+      "path": "干员语音/德·托莱多/zh/cn_024.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_393_toledo/cn_024.mp3",
+      "sha256": "ab0991a49baab08f74d6439c4172366904138936045e5b04c18af2a7ac406d41",
+      "size": 38051,
+      "language": "zh",
+      "duration": 4.698707
+    },
+    {
+      "path": "干员语音/德·托莱多/zh/cn_025.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_393_toledo/cn_025.mp3",
+      "sha256": "f429dca85a15838d457855a2766420228e7c9055b86069388e06c61990fc0ab4",
+      "size": 54351,
+      "language": "zh",
+      "duration": 6.714535
+    },
+    {
+      "path": "干员语音/德·托莱多/zh/cn_026.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_393_toledo/cn_026.mp3",
+      "sha256": "cc3c8a0df78121f501a39fb2f3fa6504bbb20bc1a58f2ba18771e10b513d75f0",
+      "size": 62919,
+      "language": "zh",
+      "duration": 7.790317
+    },
+    {
+      "path": "干员语音/德·托莱多/zh/cn_027.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_393_toledo/cn_027.mp3",
+      "sha256": "e855755b38954c254da02bdb1e9632bdf84ea7c4666113666729cec6ddb1aae0",
+      "size": 71697,
+      "language": "zh",
+      "duration": 8.907619
+    },
+    {
+      "path": "干员语音/德·托莱多/zh/cn_028.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_393_toledo/cn_028.mp3",
+      "sha256": "4f4ae381df569d57d8fab65de5875288f81c221f309fdcb337119c1da9069521",
+      "size": 50381,
+      "language": "zh",
+      "duration": 6.235873
+    },
+    {
+      "path": "干员语音/德·托莱多/zh/cn_029.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_393_toledo/cn_029.mp3",
+      "sha256": "85097a5380066107c67d32d2af918b7b7fe91fb7f4ee7dc9fa2faf01f7aefbb8",
+      "size": 117045,
+      "language": "zh",
+      "duration": 14.571406
+    },
+    {
+      "path": "干员语音/德·托莱多/zh/cn_030.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_393_toledo/cn_030.mp3",
+      "sha256": "bde4b8051cb3787f6ff4fa5570469c29eb8cef2728e1dd2484f411a1d9734d21",
+      "size": 77966,
+      "language": "zh",
+      "duration": 9.677052
+    },
+    {
+      "path": "干员语音/德·托莱多/zh/cn_031.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_393_toledo/cn_031.mp3",
+      "sha256": "649b5644c2d43c3e2c889f38d19c2bd922b237487c5d420ab00c1805cb93aaec",
+      "size": 113283,
+      "language": "zh",
+      "duration": 14.087302
+    },
+    {
+      "path": "干员语音/德·托莱多/zh/cn_032.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_393_toledo/cn_032.mp3",
+      "sha256": "a6113ad6762f5c49a38a602fcfcf65ae9cd038ccd87fc79d643995234f703e66",
+      "size": 56232,
+      "language": "zh",
+      "duration": 6.951179
+    },
+    {
+      "path": "干员语音/德·托莱多/zh/cn_033.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_393_toledo/cn_033.mp3",
+      "sha256": "e6859ed1271afb098f1724d327b334793fd4d03e1591762a97f8a9acb135a362",
+      "size": 73159,
+      "language": "zh",
+      "duration": 9.077052
+    },
+    {
+      "path": "干员语音/德·托莱多/zh/cn_034.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_393_toledo/cn_034.mp3",
+      "sha256": "84637ecc15f066fa3154f0b2cf43a7351b07b0df19b37f986828821f6feb0c20",
+      "size": 15272,
+      "language": "zh",
+      "duration": 1.853855
+    },
+    {
+      "path": "干员语音/德·托莱多/zh/cn_037.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_393_toledo/cn_037.mp3",
+      "sha256": "9b1a52e890301b1c8680342a289e525d2a071270006dba27f75234d8de893c2b",
+      "size": 12137,
+      "language": "zh",
+      "duration": 1.445828
+    },
+    {
+      "path": "干员语音/德·托莱多/zh/cn_036.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_393_toledo/cn_036.mp3",
+      "sha256": "8db14b61cbd1676f0beb875792359a3a9348fb71fbf34fee904cbfd0fd24c7f7",
+      "size": 34080,
+      "language": "zh",
+      "duration": 4.182154
+    },
+    {
+      "path": "干员语音/德·托莱多/zh/cn_038.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_393_toledo/cn_038.mp3",
+      "sha256": "2eb3968cdc4cfa38f60b12692bcb25810495b883e547219bcde68b9961550b87",
+      "size": 123941,
+      "language": "zh",
+      "duration": 15.427256
+    },
+    {
+      "path": "干员语音/德·托莱多/zh/cn_042.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_393_toledo/cn_042.mp3",
+      "sha256": "6ff864ee60477750ea4a8932f4b733756356c303e8297a8c6f987829e5aa6afb",
+      "size": 45156,
+      "language": "zh",
+      "duration": 5.568005
+    },
+    {
+      "path": "干员语音/德·托莱多/zh/cn_043.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_393_toledo/cn_043.mp3",
+      "sha256": "9fff57dd2de094d3779f6e8ecd94ca26b0c58572babe165cb442abb6df244c19",
+      "size": 136898,
+      "language": "zh",
+      "duration": 17.03619
+    },
+    {
+      "path": "干员语音/德·托莱多/zh/cn_044.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_393_toledo/cn_044.mp3",
+      "sha256": "082f0bf6bde38bb8cd52c61bb48b0d59b1411ae734af49497d546ea1a6474ba8",
+      "size": 114119,
+      "language": "zh",
+      "duration": 14.198163
+    },
+    {
+      "path": "干员语音/旅骨/cn_001.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_4232_hbound/cn_001.mp3",
+      "sha256": "49b32035c305f53346646cd72c04bcae869ef9c1749becd4e860a4115b9be9ea",
+      "size": 267301,
+      "language": "ja",
+      "duration": 33.345351
+    },
+    {
+      "path": "干员语音/旅骨/cn_002.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_4232_hbound/cn_002.mp3",
+      "sha256": "a62769a5ad519be53379725838ad91eb2033468a147507d259b5e15f2ea65031",
+      "size": 243269,
+      "language": "ja",
+      "duration": 30.330204
+    },
+    {
+      "path": "干员语音/旅骨/cn_003.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_4232_hbound/cn_003.mp3",
+      "sha256": "2a8c4603f5226ca30e0ba96bdfdfd99c3ecdf1523416a847628ccb98c244c942",
+      "size": 215683,
+      "language": "ja",
+      "duration": 26.886349
+    },
+    {
+      "path": "干员语音/旅骨/cn_004.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_4232_hbound/cn_004.mp3",
+      "sha256": "900e0c7fec1f6de4284d4dc99b62cc1dd6c9547453ae5d805f997f61ca182715",
+      "size": 295514,
+      "language": "ja",
+      "duration": 36.876621
+    },
+    {
+      "path": "干员语音/旅骨/cn_005.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_4232_hbound/cn_005.mp3",
+      "sha256": "f248db985ae19b1c75b73645f3beadf5cc7e07ce2d99620d338e53bcd4b01d21",
+      "size": 248284,
+      "language": "ja",
+      "duration": 30.96
+    },
+    {
+      "path": "干员语音/旅骨/cn_006.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_4232_hbound/cn_006.mp3",
+      "sha256": "4aa925acd34d2b1f7285ecea9afbdb87408a4af13fbabdff8f86a29ae9c94f95",
+      "size": 245777,
+      "language": "ja",
+      "duration": 30.660385
+    },
+    {
+      "path": "干员语音/旅骨/cn_007.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_4232_hbound/cn_007.mp3",
+      "sha256": "fe376a9f1964bcfd755a553bba56230a2a9e992b850995a778f94b4a1fcc4cfa",
+      "size": 254136,
+      "language": "ja",
+      "duration": 31.703787
+    },
+    {
+      "path": "干员语音/旅骨/cn_008.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_4232_hbound/cn_008.mp3",
+      "sha256": "a238488aa24d0b12b9a4a88313709cd882a0737bc05a5f71f31aa8be29606526",
+      "size": 233447,
+      "language": "ja",
+      "duration": 29.105669
+    },
+    {
+      "path": "干员语音/旅骨/cn_009.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_4232_hbound/cn_009.mp3",
+      "sha256": "66a27df72590a6bef150f006e6875a2fafa4871335afdce5e13c266fc5cd7592",
+      "size": 315158,
+      "language": "ja",
+      "duration": 39.32
+    },
+    {
+      "path": "干员语音/旅骨/cn_010.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_4232_hbound/cn_010.mp3",
+      "sha256": "23b0f771836d91faf532d649c7db5cb37e75844ea0ba60f2e01afdfa98ae18ad",
+      "size": 206906,
+      "language": "ja",
+      "duration": 25.79
+    },
+    {
+      "path": "干员语音/旅骨/cn_012.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_4232_hbound/cn_012.mp3",
+      "sha256": "e823f516b04aa99e1a4a2510dd029cb21d19c60c01bf5001753cb0306ba75c93",
+      "size": 8376,
+      "language": "ja",
+      "duration": 0.97542
+    },
+    {
+      "path": "干员语音/旅骨/cn_011.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_4232_hbound/cn_011.mp3",
+      "sha256": "a4e74faffcd7e09b75030072d6e4d823920afe1993aa521d6ddbfd40c74c4737",
+      "size": 154452,
+      "language": "ja",
+      "duration": 19.24
+    },
+    {
+      "path": "干员语音/旅骨/cn_013.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_4232_hbound/cn_013.mp3",
+      "sha256": "b56130da5f367118f894b6500b55d6ced33a741a1575f5af8619d99805a3c873",
+      "size": 141287,
+      "language": "ja",
+      "duration": 17.6
+    },
+    {
+      "path": "干员语音/旅骨/cn_014.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_4232_hbound/cn_014.mp3",
+      "sha256": "88828a1209ceb32337427d7d1d1b4c27233ae7c7ac26f14782e1e2c69200071a",
+      "size": 167618,
+      "language": "ja",
+      "duration": 20.890068
+    },
+    {
+      "path": "干员语音/旅骨/cn_017.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_4232_hbound/cn_017.mp3",
+      "sha256": "d07aa157cf340504079712c4b9f142bded7c228c1f41bcbe1678156c8102b86a",
+      "size": 46828,
+      "language": "ja",
+      "duration": 5.775125
+    },
+    {
+      "path": "干员语音/旅骨/cn_018.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_4232_hbound/cn_018.mp3",
+      "sha256": "ec35b9fab1122bff74a9469f966615b52d5468daec1b0c83cbf07e15fa400e7d",
+      "size": 42857,
+      "language": "ja",
+      "duration": 5.28
+    },
+    {
+      "path": "干员语音/旅骨/cn_020.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_4232_hbound/cn_020.mp3",
+      "sha256": "41ab945639c4d7556f97a0ceaacbfe65af8f3232f3903738b7629f4a44ea6dc2",
+      "size": 49336,
+      "language": "ja",
+      "duration": 6.090476
+    },
+    {
+      "path": "干员语音/旅骨/cn_019.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_4232_hbound/cn_019.mp3",
+      "sha256": "7d38e898bfddc37b77052eeb977ec3dbaa1c2fa5e2252c644ca1b53794a48a1a",
+      "size": 53933,
+      "language": "ja",
+      "duration": 6.67585
+    },
+    {
+      "path": "干员语音/旅骨/cn_021.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_4232_hbound/cn_021.mp3",
+      "sha256": "78bbc874ecc41d489b39da3c67252b17ad419ffa4deb0be07f5575ece1337ce0",
+      "size": 44320,
+      "language": "ja",
+      "duration": 5.485533
+    },
+    {
+      "path": "干员语音/旅骨/cn_022.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_4232_hbound/cn_022.mp3",
+      "sha256": "296c4f35365ecfa3eeea1209392c550370a443901a2f7999c4eaca713718a967",
+      "size": 62710,
+      "language": "ja",
+      "duration": 7.78
+    },
+    {
+      "path": "干员语音/旅骨/cn_023.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_4232_hbound/cn_023.mp3",
+      "sha256": "e4335d78d451deb4162e57e5ce848331202dacbfafc409fbb39fa7649f47aa3b",
+      "size": 51426,
+      "language": "ja",
+      "duration": 6.35
+    },
+    {
+      "path": "干员语音/旅骨/cn_024.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_4232_hbound/cn_024.mp3",
+      "sha256": "6234d1709cacbd7d5e5e431be9f1fd19bd22f7dcc515fa51a0e1ad4a0be619ab",
+      "size": 42021,
+      "language": "ja",
+      "duration": 5.18
+    },
+    {
+      "path": "干员语音/旅骨/cn_025.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_4232_hbound/cn_025.mp3",
+      "sha256": "db426c44bfa757a0ae4ab650ed530b36efbe07dc62b06093980f714c271f3995",
+      "size": 23004,
+      "language": "ja",
+      "duration": 2.8
+    },
+    {
+      "path": "干员语音/旅骨/cn_026.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_4232_hbound/cn_026.mp3",
+      "sha256": "0e12b3a36a8d568a6d2462fdd7352e7ccc95a46487b2545fea691eecd0dadad8",
+      "size": 31363,
+      "language": "ja",
+      "duration": 3.86
+    },
+    {
+      "path": "干员语音/旅骨/cn_027.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_4232_hbound/cn_027.mp3",
+      "sha256": "53f98f2fda1d1026c85db22e3a5ffb20fd5c96849998fc2db356c414d996f3df",
+      "size": 24885,
+      "language": "ja",
+      "duration": 3.05
+    },
+    {
+      "path": "干员语音/旅骨/cn_028.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_4232_hbound/cn_028.mp3",
+      "sha256": "3de0f0af57c24ab65e94bb781acb17013f1a330aee5f2c8add00b768b8016ee9",
+      "size": 26139,
+      "language": "ja",
+      "duration": 3.210227
+    },
+    {
+      "path": "干员语音/旅骨/cn_029.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_4232_hbound/cn_029.mp3",
+      "sha256": "bd09937949e7d323f3b5627e4f4345bb5dd680ddd7a2e09a25fa5dfda63e2558",
+      "size": 49963,
+      "language": "ja",
+      "duration": 6.1861
+    },
+    {
+      "path": "干员语音/旅骨/cn_030.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_4232_hbound/cn_030.mp3",
+      "sha256": "08895829d2171a09b103c99f552c5c9c3b575a7b529374b1f1ec17cd67fe2914",
+      "size": 152363,
+      "language": "ja",
+      "duration": 18.97
+    },
+    {
+      "path": "干员语音/旅骨/cn_031.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_4232_hbound/cn_031.mp3",
+      "sha256": "7df89b55f0590a111c01bf7917070c7d236c1725a0a6d96c0bc071923c1f9fd6",
+      "size": 37424,
+      "language": "ja",
+      "duration": 4.6
+    },
+    {
+      "path": "干员语音/旅骨/cn_032.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_4232_hbound/cn_032.mp3",
+      "sha256": "76cc5617e5bdacb555a393a0746a4c15cfbec9e035a28de248f734b529a23808",
+      "size": 61248,
+      "language": "ja",
+      "duration": 7.6
+    },
+    {
+      "path": "干员语音/旅骨/cn_033.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_4232_hbound/cn_033.mp3",
+      "sha256": "2177d2a923c0f7527cf05eca05297b96c210ccaf76e5fb7f479d9e603b69eb93",
+      "size": 69398,
+      "language": "ja",
+      "duration": 8.609615
+    },
+    {
+      "path": "干员语音/旅骨/cn_034.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_4232_hbound/cn_034.mp3",
+      "sha256": "3fc843dd83cd1306aac473b9b989414398b473dc58b74405813f3d8fa3d48aa9",
+      "size": 42648,
+      "language": "ja",
+      "duration": 5.261565
+    },
+    {
+      "path": "干员语音/旅骨/cn_036.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_4232_hbound/cn_036.mp3",
+      "sha256": "0e6a08db1976850fefd93063622dd7d27dc766cda14e2dda33d60298f9091a0c",
+      "size": 71488,
+      "language": "ja",
+      "duration": 8.861429
+    },
+    {
+      "path": "干员语音/旅骨/cn_037.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_4232_hbound/cn_037.mp3",
+      "sha256": "a2083ec87c57697b09cd042572350a30b48e6036c900d12bc629ef72520db9aa",
+      "size": 8376,
+      "language": "ja",
+      "duration": 0.973696
+    },
+    {
+      "path": "干员语音/旅骨/cn_038.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_4232_hbound/cn_038.mp3",
+      "sha256": "9b306557dcdfd85219bac56a655e1b6fa31a97c75fad6374b018386c6aca7ef2",
+      "size": 284438,
+      "language": "ja",
+      "duration": 35.479365
+    },
+    {
+      "path": "干员语音/旅骨/cn_042.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_4232_hbound/cn_042.mp3",
+      "sha256": "c695e3f75b6418bdaa30d7a2f8d8c0a7ad90694edb67c03f9137bc78fba0ddbf",
+      "size": 21959,
+      "language": "ja",
+      "duration": 2.67
+    },
+    {
+      "path": "干员语音/旅骨/cn_043.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_4232_hbound/cn_043.mp3",
+      "sha256": "28e78d29a4c5355aac4dd547155ea9963d775aadb4bd13b3306c13849ac086d3",
+      "size": 193741,
+      "language": "ja",
+      "duration": 24.146848
+    },
+    {
+      "path": "干员语音/旅骨/cn_044.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice/char_4232_hbound/cn_044.mp3",
+      "sha256": "78e722851a0198c2ff23b3765a3a3e88534fd7ecd429029d6c97ff395f0c8794",
+      "size": 285692,
+      "language": "ja",
+      "duration": 35.640499
+    },
+    {
+      "path": "干员语音/旅骨/zh/cn_002.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_4232_hbound/cn_002.mp3",
+      "sha256": "19d6be87a018eaeb061351e548308b2ed50a1031a73d104e156c0f72dcb39d20",
+      "size": 208369,
+      "language": "zh",
+      "duration": 25.96678
+    },
+    {
+      "path": "干员语音/旅骨/zh/cn_001.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_4232_hbound/cn_001.mp3",
+      "sha256": "27652b76aed3da7bb5c96122b1651dcef69b40735fa41333da067efb9851f42e",
+      "size": 175768,
+      "language": "zh",
+      "duration": 21.895828
+    },
+    {
+      "path": "干员语音/旅骨/zh/cn_003.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_4232_hbound/cn_003.mp3",
+      "sha256": "bcc4b9c948924bd457f5961aaffa4007a6267d5b8ac25e4b3856bf7a86c0aaf9",
+      "size": 147347,
+      "language": "zh",
+      "duration": 18.360136
+    },
+    {
+      "path": "干员语音/旅骨/zh/cn_004.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_4232_hbound/cn_004.mp3",
+      "sha256": "793d1c020fa2051ddca658d13f033a9d874e5a0f8599165ee43493e8ac8d87fa",
+      "size": 196248,
+      "language": "zh",
+      "duration": 24.461746
+    },
+    {
+      "path": "干员语音/旅骨/zh/cn_005.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_4232_hbound/cn_005.mp3",
+      "sha256": "edee43e0fdb1e626eb9a825789b2d83d172b3c7796c751b9dbffb4e74d336a6e",
+      "size": 153199,
+      "language": "zh",
+      "duration": 19.073991
+    },
+    {
+      "path": "干员语音/旅骨/zh/cn_006.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_4232_hbound/cn_006.mp3",
+      "sha256": "10948ca9168d89bd4a7fbd123d267dbc51b96fca14c32342674a124ca728c51d",
+      "size": 212131,
+      "language": "zh",
+      "duration": 26.461406
+    },
+    {
+      "path": "干员语音/旅骨/zh/cn_007.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_4232_hbound/cn_007.mp3",
+      "sha256": "0a3ceb8bfee7ca50d21255347c5b5e9e84e578542e1cfada72b5b9668d27b994",
+      "size": 189770,
+      "language": "zh",
+      "duration": 23.65941
+    },
+    {
+      "path": "干员语音/旅骨/zh/cn_008.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_4232_hbound/cn_008.mp3",
+      "sha256": "c3f5667990191d59e9bbb8e87b3416f8f734fb3c85486ede901bd8888c0c1063",
+      "size": 201264,
+      "language": "zh",
+      "duration": 25.079592
+    },
+    {
+      "path": "干员语音/旅骨/zh/cn_009.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_4232_hbound/cn_009.mp3",
+      "sha256": "ee0e3195cb70ccffa1e8e38e7dc57849fb60f3b5ea6c8aab9aee8e3ee2444012",
+      "size": 259151,
+      "language": "zh",
+      "duration": 32.330612
+    },
+    {
+      "path": "干员语音/旅骨/zh/cn_010.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_4232_hbound/cn_010.mp3",
+      "sha256": "2e44a07caede8e0bf3e6ecc711b020e5096f55b7be0468ab9b8a97fc6302325b",
+      "size": 124150,
+      "language": "zh",
+      "duration": 15.444512
+    },
+    {
+      "path": "干员语音/旅骨/zh/cn_011.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_4232_hbound/cn_011.mp3",
+      "sha256": "189d415972432cf097594158d68a439d72109b311110c92cd6104d3924d3d4f5",
+      "size": 123523,
+      "language": "zh",
+      "duration": 15.361066
+    },
+    {
+      "path": "干员语音/旅骨/zh/cn_012.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_4232_hbound/cn_012.mp3",
+      "sha256": "f8238c0d626591d4e58977356991eb278b7d8ca9f231a4a976df59e9bffd8b2b",
+      "size": 15899,
+      "language": "zh",
+      "duration": 1.908005
+    },
+    {
+      "path": "干员语音/旅骨/zh/cn_013.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_4232_hbound/cn_013.mp3",
+      "sha256": "f361a277435e73b145e840a9fff357656d15bdf6837afc26fb8c73f67f56bdd8",
+      "size": 101790,
+      "language": "zh",
+      "duration": 12.664875
+    },
+    {
+      "path": "干员语音/旅骨/zh/cn_014.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_4232_hbound/cn_014.mp3",
+      "sha256": "8f4f1dd1987307694fef107edb065eb890784399af90de1af27b0a79a71019a4",
+      "size": 111821,
+      "language": "zh",
+      "duration": 13.910385
+    },
+    {
+      "path": "干员语音/旅骨/zh/cn_017.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_4232_hbound/cn_017.mp3",
+      "sha256": "16b17b67e8a9bfdaf6904fac7756e248e4e4be57915a6afc8ec5deabf8b3f274",
+      "size": 38887,
+      "language": "zh",
+      "duration": 4.786281
+    },
+    {
+      "path": "干员语音/旅骨/zh/cn_018.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_4232_hbound/cn_018.mp3",
+      "sha256": "e369f7bc9651b2ea174ee41953fb91d191e28e6fcaf8761800f4cb0ad3066457",
+      "size": 27184,
+      "language": "zh",
+      "duration": 3.319206
+    },
+    {
+      "path": "干员语音/旅骨/zh/cn_019.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_4232_hbound/cn_019.mp3",
+      "sha256": "76a219e00b9c91b6a4b79e9917ff51c4d3acc95e0b1e9f04c20a93f20a7bade8",
+      "size": 30737,
+      "language": "zh",
+      "duration": 3.787279
+    },
+    {
+      "path": "干员语音/旅骨/zh/cn_020.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_4232_hbound/cn_020.mp3",
+      "sha256": "1457e851561ff2374c970e227faac4e15ede37202e60f9794e8728067b9fe9a5",
+      "size": 49127,
+      "language": "zh",
+      "duration": 6.077732
+    },
+    {
+      "path": "干员语音/旅骨/zh/cn_021.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_4232_hbound/cn_021.mp3",
+      "sha256": "cb7bcce5928926ce6488a4313e04fb54783048ddea90605e9e71d31758cbcac3",
+      "size": 32617,
+      "language": "zh",
+      "duration": 4.022744
+    },
+    {
+      "path": "干员语音/旅骨/zh/cn_022.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_4232_hbound/cn_022.mp3",
+      "sha256": "1f76b3442d547749e94a55b6d9e5f1f9ff2553c384f0a9ff4e0038f4cd98e8f1",
+      "size": 44529,
+      "language": "zh",
+      "duration": 5.50356
+    },
+    {
+      "path": "干员语音/旅骨/zh/cn_023.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_4232_hbound/cn_023.mp3",
+      "sha256": "100c3b3c1da304bdcdf726743bd762c93ea961a5cfad309f7efd7e4ebc43345b",
+      "size": 36588,
+      "language": "zh",
+      "duration": 4.499025
+    },
+    {
+      "path": "干员语音/旅骨/zh/cn_025.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_4232_hbound/cn_025.mp3",
+      "sha256": "7e260f5827490e842b62d8e0f2639608e0f3313c4cf46e323bc1596bb2f698e0",
+      "size": 16735,
+      "language": "zh",
+      "duration": 2.036032
+    },
+    {
+      "path": "干员语音/旅骨/zh/cn_024.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_4232_hbound/cn_024.mp3",
+      "sha256": "35d355336f8173fad1386d12b740a025f48de4f7e31bae92d46f9899009784b1",
+      "size": 33871,
+      "language": "zh",
+      "duration": 4.166576
+    },
+    {
+      "path": "干员语音/旅骨/zh/cn_026.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_4232_hbound/cn_026.mp3",
+      "sha256": "8d1d0b4e06626c8ab2e10e33753fa71c16222c4d6fa831a9af4081ece5436da1",
+      "size": 24676,
+      "language": "zh",
+      "duration": 3.010476
+    },
+    {
+      "path": "干员语音/旅骨/zh/cn_027.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_4232_hbound/cn_027.mp3",
+      "sha256": "73ec199b58b7d05e3cf4b9cfcec8717d11a7161e12d88a3555e2db1d95a82467",
+      "size": 23631,
+      "language": "zh",
+      "duration": 2.874535
+    },
+    {
+      "path": "干员语音/旅骨/zh/cn_028.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_4232_hbound/cn_028.mp3",
+      "sha256": "4716200de2c2b14d0e4c592ebc3cb2965473ef9c5a2034dd5c1257c2e05b463c",
+      "size": 22377,
+      "language": "zh",
+      "duration": 2.741587
+    },
+    {
+      "path": "干员语音/旅骨/zh/cn_029.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_4232_hbound/cn_029.mp3",
+      "sha256": "90bf0ace93fb57eb7768eb059216252285016a715245f925fdda1e52810e8b56",
+      "size": 38887,
+      "language": "zh",
+      "duration": 4.785102
+    },
+    {
+      "path": "干员语音/旅骨/zh/cn_030.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_4232_hbound/cn_030.mp3",
+      "sha256": "daa1374592514f15914023194781a3c7bd3ff43ba0f461858ac1a8bf14d74bf6",
+      "size": 98864,
+      "language": "zh",
+      "duration": 12.284989
+    },
+    {
+      "path": "干员语音/旅骨/zh/cn_031.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_4232_hbound/cn_031.mp3",
+      "sha256": "940cee4f8df7c88896352eebc5f751326f74aad074157878081da2137ace5f04",
+      "size": 36797,
+      "language": "zh",
+      "duration": 4.53263
+    },
+    {
+      "path": "干员语音/旅骨/zh/cn_032.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_4232_hbound/cn_032.mp3",
+      "sha256": "880e6bea6426a8c0a6319a42bd41d2e3d6693e854847d912fc3fcce47bbd6c54",
+      "size": 40559,
+      "language": "zh",
+      "duration": 5.007347
+    },
+    {
+      "path": "干员语音/旅骨/zh/cn_033.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_4232_hbound/cn_033.mp3",
+      "sha256": "c05c876872c6e02419f5356bcc73cd268e455bc35efea362c9411ceb5d0c7f79",
+      "size": 45783,
+      "language": "zh",
+      "duration": 5.650181
+    },
+    {
+      "path": "干员语音/旅骨/zh/cn_034.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_4232_hbound/cn_034.mp3",
+      "sha256": "c875232367d43db503806884eefcc06c9b10916cb25e969837a05b7a6f9a3e98",
+      "size": 37006,
+      "language": "zh",
+      "duration": 4.555556
+    },
+    {
+      "path": "干员语音/旅骨/zh/cn_036.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_4232_hbound/cn_036.mp3",
+      "sha256": "3bf34ff89fd2f1d67d136f1a1a8e16994977a0cdab027ad932b49d376648b11b",
+      "size": 55605,
+      "language": "zh",
+      "duration": 6.891406
+    },
+    {
+      "path": "干员语音/旅骨/zh/cn_037.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_4232_hbound/cn_037.mp3",
+      "sha256": "49c1b326031ddd904f9e3a83539dd07938ae6426234ce9f15026aa61da5125ba",
+      "size": 8167,
+      "language": "zh",
+      "duration": 0.953469
+    },
+    {
+      "path": "干员语音/旅骨/zh/cn_038.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_4232_hbound/cn_038.mp3",
+      "sha256": "776298af9957154b1e48d8ad124e3cce680efff2820dd4fbd736ca6d09524ca1",
+      "size": 223625,
+      "language": "zh",
+      "duration": 27.88068
+    },
+    {
+      "path": "干员语音/旅骨/zh/cn_042.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_4232_hbound/cn_042.mp3",
+      "sha256": "795dff11096e45be50aa4123f2c21a8edaea5ec4d35bdc965f1a6b8ae9b70248",
+      "size": 15063,
+      "language": "zh",
+      "duration": 1.812676
+    },
+    {
+      "path": "干员语音/旅骨/zh/cn_043.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_4232_hbound/cn_043.mp3",
+      "sha256": "da5cc5bee81a887f20c9afab1b6c2373b4297f0db9fa1f4c972f4677c4fc5a8a",
+      "size": 149228,
+      "language": "zh",
+      "duration": 18.584195
+    },
+    {
+      "path": "干员语音/旅骨/zh/cn_044.mp3",
+      "source": "https://torappu.prts.wiki/assets/audio/voice_cn/char_4232_hbound/cn_044.mp3",
+      "sha256": "2c3042d78ea53be850fcc1160c99d926772c7d82d9a4cc4fc0b9ba918fe6c8df",
+      "size": 214848,
+      "language": "zh",
+      "duration": 26.782857
+    }
+  ]
+}
